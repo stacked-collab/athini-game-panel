@@ -359,19 +359,6 @@ PY
   die "Unable to generate a UUID (missing uuidgen, /proc/sys/kernel/random/uuid, and python3)."
 }
 
-read_app_version() {
-  local source_root="$1"
-  local package_file="$source_root/backend/package.json"
-
-  [[ -f "$package_file" ]] || die "Missing backend package.json file: $package_file"
-
-  local version=""
-  version="$(awk -F'"' '/"version"[[:space:]]*:/ { print $4; exit }' "$package_file")"
-  [[ -n "$version" ]] || die "Unable to read version from: $package_file"
-
-  printf '%s' "$version"
-}
-
 prompt_required() {
   local current="$1"
   local prompt="$2"
@@ -668,6 +655,7 @@ main() {
   SOURCE_ROOT="$LOCAL_SOURCE_ROOT"
   assert_app_versions_match "$SOURCE_ROOT"
   APP_VERSION="$(read_app_version "$SOURCE_ROOT")"
+  IMAGE_VERSION="$(read_image_version "$SOURCE_ROOT")"
 
   log "Installing Docker and Compose..."
   ensure_docker_stack
@@ -694,7 +682,7 @@ main() {
   write_compose_file
 
   log "Pulling updater image..."
-  updater_image="ovhcom/gamepanel-updater:${APP_VERSION}"
+  updater_image="ovhcom/gamepanel-updater:${IMAGE_VERSION}"
   if docker pull "$updater_image"; then
     log "Updater image is available: $updater_image"
   else

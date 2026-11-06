@@ -1,3 +1,4 @@
+// Athini palette customization; see NOTICE.
 import { useState } from 'react';
 import {
   Check,
@@ -67,7 +68,7 @@ function metricBarColor(metric: 'cpu' | 'memory' | 'disk'): string {
 // Card surfaces are self-themed (light/dark). The action buttons keep the mobile's
 // exact classes + `gp-btn-*` markers and stay AppButton so the shared light-mode
 // colour overrides in globals.css (scoped to gp-game-servers-{table,mobile,grid}) apply.
-const CARD = 'border-gray-200 bg-white dark:border-gray-800 dark:bg-[#1f2937]';
+const CARD = 'border-gray-200 bg-white dark:border-gray-800 dark:bg-[#172b22]';
 const TEXT_PRIMARY = 'text-gray-900 dark:text-white';
 const TEXT_SECONDARY = 'text-gray-600 dark:text-gray-300';
 const TEXT_TERTIARY = 'text-gray-500 dark:text-gray-400';
@@ -126,7 +127,7 @@ export function GameServerCard({
     <div
       className={`relative rounded-lg p-4 border ${CARD} ${
         isGrid
-          ? 'transition-all duration-150 hover:-translate-y-0.5 hover:border-[#157EEA]/60 hover:shadow-[0_12px_30px_-14px_rgba(2,6,23,0.85)] motion-reduce:transition-none motion-reduce:hover:translate-y-0'
+          ? 'transition-all duration-150 hover:-translate-y-0.5 hover:border-[#2b5440]/60 hover:shadow-[0_12px_30px_-14px_rgba(12, 20, 16,0.85)] motion-reduce:transition-none motion-reduce:hover:translate-y-0'
           : ''
       }`}
       role="listitem"
@@ -144,7 +145,7 @@ export function GameServerCard({
                   if (event.key === 'Escape') handleCancelEdit();
                 }}
                 spellCheck={false}
-                className="flex-1 rounded px-2 py-1 text-sm border bg-white text-gray-900 border-gray-300 dark:bg-gray-900 dark:text-white dark:border-gray-700 focus:outline-none focus:border-[#0050D5]"
+                className="flex-1 rounded px-2 py-1 text-sm border bg-white text-gray-900 border-gray-300 dark:bg-gray-900 dark:text-white dark:border-gray-700 focus:outline-none focus:border-[#254c39]"
                 autoFocus
               />
               <button
@@ -451,7 +452,7 @@ export function GameServerCard({
           disabled={!canReadLogs}
           onClick={() => onAction(server.id, server.name, 'console')}
           className={`gp-btn-console-mobile flex items-center justify-center gap-1 py-2 rounded text-sm transition-colors whitespace-nowrap ${
-            canReadLogs ? 'bg-[#0050D7] hover:bg-[#157EEA] hover:text-white text-white' : 'bg-gray-800 text-gray-500 cursor-not-allowed'
+            canReadLogs ? 'bg-[#254c39] hover:bg-[#2b5440] hover:text-white text-white' : 'bg-gray-800 text-gray-500 cursor-not-allowed'
           }`}
         >
           <Terminal className="w-4 h-4" />

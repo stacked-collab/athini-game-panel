@@ -1,3 +1,4 @@
+// Athini palette customization; see NOTICE.
 import { AlertCircle, Check, Copy } from 'lucide-react';
 import {
   Area,
@@ -153,7 +154,7 @@ export function GameServersTableDialogs({
                 <div className="overflow-x-auto rounded-lg border border-gray-700/60">
                   <table className="w-full min-w-[620px] text-sm border-collapse">
                     <thead>
-                      <tr className="bg-[#0f172a] border-b border-gray-700/60">
+                      <tr className="bg-[#15221d] border-b border-gray-700/60">
                         <th className={`px-3 py-2.5 text-left text-xs font-semibold ${textSecondary} whitespace-nowrap`}>Protocol</th>
                         <th className={`px-3 py-2.5 text-left text-xs font-semibold ${textSecondary} whitespace-nowrap`}>Host Port</th>
                         <th className={`px-3 py-2.5 text-left text-xs font-semibold ${textSecondary} whitespace-nowrap`}>Port Name</th>
@@ -166,7 +167,7 @@ export function GameServersTableDialogs({
                         return (
                           <tr
                             key={`${row.protocol}-${row.hostPort}`}
-                            className={`bg-[#111827] ${idx < connectionModalRows.length - 1 ? 'border-b border-gray-700/40' : ''}`}
+                            className={`bg-[#15221d] ${idx < connectionModalRows.length - 1 ? 'border-b border-gray-700/40' : ''}`}
                           >
                             <td className={`px-3 py-2.5 ${textPrimary}`}>{row.protocol}</td>
                             <td className={`px-3 py-2.5 font-mono ${textPrimary}`}>{row.hostPort}</td>
@@ -174,7 +175,7 @@ export function GameServersTableDialogs({
                               {row.name ? (
                                 <span className={`inline-flex items-center rounded-full border border-gray-600 px-2 py-0.5 text-xs ${
                                   String(row.name ?? '').toLowerCase().includes('game')
-                                    ? 'text-[var(--color-cyan-400)] border-[var(--color-cyan-400)]/60 bg-[#0050D7]/10'
+                                    ? 'text-[var(--color-cyan-400)] border-[var(--color-cyan-400)]/60 bg-[#254c39]/10'
                                     : 'text-gray-300'
                                 }`}>
                                   {row.name}
@@ -540,7 +541,7 @@ export function GameServersTableDialogs({
                   {historyModalEntries.map((entry, index) => (
                     <div
                       key={`${entry.id}-${entry.timestamp}-${index}`}
-                      className={`rounded-lg border ${rowBorder} bg-[#0f172a] p-3`}
+                      className={`rounded-lg border ${rowBorder} bg-[#15221d] p-3`}
                     >
                       <div className="flex items-center justify-between gap-3">
                         <span

@@ -1,3 +1,4 @@
+// Athini palette customization; see NOTICE.
 import { Component, type ErrorInfo, type ReactNode } from 'react';
 import { AlertTriangle } from 'lucide-react';
 
@@ -31,13 +32,13 @@ export class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundarySt
     if (!this.state.hasError) return this.props.children;
 
     return (
-      <div className="min-h-screen flex items-center justify-center bg-[#0a0e1a] p-6 text-gray-200">
-        <div className="max-w-md w-full rounded-lg border border-gray-700 bg-[#111827] p-6 text-center shadow-2xl">
+      <div className="min-h-screen flex items-center justify-center bg-background p-6 text-foreground">
+        <div className="max-w-md w-full rounded-lg border border-border bg-card p-6 text-center text-card-foreground shadow-2xl">
           <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-red-500/10">
             <AlertTriangle className="h-6 w-6 text-red-400" />
           </div>
-          <h1 className="mb-2 text-lg font-semibold text-white">Something went wrong</h1>
-          <p className="mb-5 text-sm text-gray-400">
+          <h1 className="mb-2 text-lg font-semibold text-foreground">Something went wrong</h1>
+          <p className="mb-5 text-sm text-muted-foreground">
             The interface hit an unexpected error. Reloading usually fixes it. If the problem
             persists, contact your administrator.
           </p>

@@ -1,6 +1,7 @@
 {
   "name": "game-panel-backend",
-  "version": "1.6.0",
+  "version": "1.6.1",
+  "gamepanelImageVersion": "1.6.0",
   "description": "Game Panel Backend",
   "type": "module",
   "main": "dist/index.js",

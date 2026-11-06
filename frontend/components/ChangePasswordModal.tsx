@@ -1,3 +1,4 @@
+// Athini palette customization; see NOTICE.
 import { useEffect, useState } from 'react';
 import { AlertCircle, Eye, EyeOff, KeyRound, Loader2 } from 'lucide-react';
 import { apiClient } from '../utils/api';
@@ -83,7 +84,7 @@ export function ChangePasswordModal({ isOpen, onClose }: ChangePasswordModalProp
         if (!open) onClose();
       }}
     >
-      <DialogContent className="w-[94vw] sm:w-[84vw] lg:w-[64vw] xl:w-[56vw] max-h-[90vh] sm:max-w-[520px] xl:max-w-[520px] overflow-hidden border border-gray-700/80 bg-[#0f172a] p-0 text-white">
+      <DialogContent className="w-[94vw] sm:w-[84vw] lg:w-[64vw] xl:w-[56vw] max-h-[90vh] sm:max-w-[520px] xl:max-w-[520px] overflow-hidden border border-gray-700/80 bg-[#15221d] p-0 text-white">
         <div className="max-h-[90vh] overflow-y-auto hide-scrollbar modal-scrollbar-dark p-6 md:p-7">
           <DialogHeader className="border-b border-gray-800 pb-6">
             <DialogTitle className="text-xl text-white">Change password</DialogTitle>
@@ -115,7 +116,7 @@ export function ChangePasswordModal({ isOpen, onClose }: ChangePasswordModalProp
                   value={currentPassword}
                   onChange={(event) => setCurrentPassword(event.target.value)}
                   autoComplete="current-password"
-                  className="w-full rounded-lg border border-gray-700 bg-[#1f2937] px-3 py-2 pr-10 text-sm text-white focus:border-[var(--color-cyan-400)] focus:outline-none"
+                  className="w-full rounded-lg border border-gray-700 bg-[#172b22] px-3 py-2 pr-10 text-sm text-white focus:border-[var(--color-cyan-400)] focus:outline-none"
                 />
                 <button type="button" tabIndex={-1} onClick={() => setShowCurrent(s => !s)}
                   className="absolute right-2.5 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-200 transition-colors">
@@ -131,7 +132,7 @@ export function ChangePasswordModal({ isOpen, onClose }: ChangePasswordModalProp
                   value={newPassword}
                   onChange={(event) => setNewPassword(event.target.value)}
                   autoComplete="new-password"
-                  className="w-full rounded-lg border border-gray-700 bg-[#1f2937] px-3 py-2 pr-10 text-sm text-white focus:border-[var(--color-cyan-400)] focus:outline-none"
+                  className="w-full rounded-lg border border-gray-700 bg-[#172b22] px-3 py-2 pr-10 text-sm text-white focus:border-[var(--color-cyan-400)] focus:outline-none"
                 />
                 <button type="button" tabIndex={-1} onClick={() => setShowNew(s => !s)}
                   className="absolute right-2.5 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-200 transition-colors">
@@ -147,7 +148,7 @@ export function ChangePasswordModal({ isOpen, onClose }: ChangePasswordModalProp
                   value={confirmPassword}
                   onChange={(event) => setConfirmPassword(event.target.value)}
                   autoComplete="new-password"
-                  className="w-full rounded-lg border border-gray-700 bg-[#1f2937] px-3 py-2 pr-10 text-sm text-white focus:border-[var(--color-cyan-400)] focus:outline-none"
+                  className="w-full rounded-lg border border-gray-700 bg-[#172b22] px-3 py-2 pr-10 text-sm text-white focus:border-[var(--color-cyan-400)] focus:outline-none"
                 />
                 <button type="button" tabIndex={-1} onClick={() => setShowConfirm(s => !s)}
                   className="absolute right-2.5 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-200 transition-colors">

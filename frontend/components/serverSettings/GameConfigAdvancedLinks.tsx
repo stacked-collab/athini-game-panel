@@ -1,3 +1,4 @@
+// Athini palette customization; see NOTICE.
 import { memo, useMemo } from 'react';
 import { FolderOpen, RefreshCw } from 'lucide-react';
 import { AppButton } from '../../src/ui/components';
@@ -17,7 +18,7 @@ const borderColor = 'border-gray-700';
 const textSecondary = 'text-gray-400';
 const accentText = 'text-[var(--color-cyan-400)]';
 const accentBorder = 'border-[var(--color-cyan-400)]/35';
-const accentBg = 'bg-[#0050D7]/15';
+const accentBg = 'bg-[#254c39]/15';
 
 const resolveConfigFormat = (path: string): ConfigFormat => {
   const extension = path.split('.').pop()?.toLowerCase();
@@ -41,7 +42,7 @@ const getBadgeClass = (format: ConfigFormat) => {
   }
 
   if (format === 'JSON' || format === 'YAML') {
-    return 'bg-[#0050D7]/12 text-[var(--color-cyan-400)] border-[var(--color-cyan-400)]/30';
+    return 'bg-[#254c39]/12 text-[var(--color-cyan-400)] border-[var(--color-cyan-400)]/30';
   }
 
   if (format === 'LUA' || format === 'TOML') {
@@ -49,7 +50,7 @@ const getBadgeClass = (format: ConfigFormat) => {
   }
 
   if (format === 'CFG' || format === 'TXT') {
-    return 'bg-[#0050D7]/18 text-[var(--color-cyan-400)] border-[var(--color-cyan-400)]/35';
+    return 'bg-[#254c39]/18 text-[var(--color-cyan-400)] border-[var(--color-cyan-400)]/35';
   }
 
   if (format === 'PROPERTIES') {
@@ -127,7 +128,7 @@ function GameConfigAdvancedLinksComponent({
                   disabled={!canOpen}
                   className={`inline-flex items-center justify-center gap-2 px-3 py-1.5 rounded text-sm font-medium transition-colors whitespace-nowrap ${
                     canOpen
-                      ? 'bg-[#1f2937] border border-gray-600 hover:border-[var(--color-cyan-400)]/50 hover:bg-[#27354b] text-white'
+                      ? 'bg-[#172b22] border border-gray-600 hover:border-[var(--color-cyan-400)]/50 hover:bg-[#294736] text-white'
                       : 'bg-gray-800 text-gray-500 cursor-not-allowed'
                   }`}
                 >

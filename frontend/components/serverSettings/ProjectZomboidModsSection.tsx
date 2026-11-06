@@ -1,3 +1,4 @@
+// Athini palette customization; see NOTICE.
 import { memo, useEffect, useRef, useState } from 'react';
 import { AlertTriangle, ChevronDown, ChevronUp, ExternalLink, Loader2, Plus, Trash2, X } from 'lucide-react';
 import { AppButton, AppModal, AppModalBody, AppModalContent, AppModalHeader, AppModalTitle, AppToggle } from '../../src/ui/components';
@@ -383,7 +384,7 @@ export function ProjectZomboidModsSection({
         <AppModalContent
           dismissible={false}
           className={`z-[61] w-[calc(100%-2rem)] max-w-lg overflow-hidden rounded-xl border p-4 shadow-2xl md:p-6 ${
-            isDark ? 'border-white/10 bg-[#0d1524]' : 'border-[#e2e8f0] bg-white'
+            isDark ? 'border-white/10 bg-[#141f1c]' : 'border-[#dce5df] bg-white'
           }`}
         >
           <AppModalBody className="overflow-x-hidden">

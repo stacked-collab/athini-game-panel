@@ -1,3 +1,4 @@
+// Athini palette customization; see NOTICE.
 import { LayoutGrid, List } from 'lucide-react';
 
 export type ServersViewMode = 'list' | 'grid';
@@ -27,7 +28,7 @@ export function ViewModeToggle({ value, onChange }: ViewModeToggleProps) {
             title={label}
             className={`inline-flex h-8 w-9 items-center justify-center rounded-md transition-colors ${
               active
-                ? 'bg-[#0050D7]/15 text-[var(--color-cyan-400)]'
+                ? 'bg-[#254c39]/15 text-[var(--color-cyan-400)]'
                 : 'text-gray-400 hover:text-gray-200'
             }`}
           >

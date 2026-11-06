@@ -1,3 +1,4 @@
+// Athini palette customization; see NOTICE.
 import { useState, useRef, useEffect } from 'react';
 import { createPortal } from 'react-dom';
 import {
@@ -265,7 +266,7 @@ export function GameServersDesktopTable({
                     <div
                       ref={metricsPopoverRef}
                       style={{ top: metricsPopoverPos.top, left: metricsPopoverPos.left }}
-                      className="fixed z-50 w-36 rounded-lg border border-gray-700 bg-[#0f172a] py-1 shadow-xl"
+                      className="fixed z-50 w-36 rounded-lg border border-gray-700 bg-[#15221d] py-1 shadow-xl"
                     >
                       {(['cpu', 'memory', 'disk', 'network'] as const).map((type) => {
                         const isChecked = visibleMetrics.includes(type);
@@ -369,7 +370,7 @@ export function GameServersDesktopTable({
                           if (e.key === 'Enter') handleSaveEdit(server.id);
                           if (e.key === 'Escape') handleCancelEdit();
                         }}
-                        className={`${inputBg} border ${inputBorder} rounded px-2 py-1 ${textPrimary} focus:outline-none focus:border-[#0050D5]`}
+                        className={`${inputBg} border ${inputBorder} rounded px-2 py-1 ${textPrimary} focus:outline-none focus:border-[#254c39]`}
                         autoFocus
                       />
                       <AppButton
@@ -749,7 +750,7 @@ export function GameServersDesktopTable({
         className={`gp-add-server-button group inline-flex h-10 min-w-[240px] items-center justify-center gap-2 rounded-md px-6 py-0 font-semibold leading-none transition-all ${
           canOpenInstallModal
             ? isDark
-              ? 'border-2 border-[var(--color-cyan-400)]/45 bg-[#0050D7]/10 text-[var(--color-cyan-400)] hover:bg-[#157EEA]/20 hover:border-[var(--color-cyan-400)] hover:text-white'
+              ? 'border-2 border-[var(--color-cyan-400)]/45 bg-[#254c39]/10 text-[var(--color-cyan-400)] hover:bg-[#2b5440]/20 hover:border-[var(--color-cyan-400)] hover:text-white'
               : '!border-0 !bg-[var(--gp-primary-700)] !text-white hover:!bg-[var(--gp-primary-600)]'
             : 'border border-gray-700 bg-gray-800 text-gray-500 cursor-not-allowed'
         }`}

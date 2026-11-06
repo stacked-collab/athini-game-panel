@@ -1,4 +1,4 @@
-import { getAppVersion } from './appInfo';
+import { getGamePanelImageVersion } from './appInfo';
 
 export interface OvhcloudPort {
   port: number;
@@ -18,7 +18,7 @@ export interface OvhcloudImage {
 }
 
 const REGISTRY = 'ovhcom';
-const VERSION = getAppVersion().replace(/^v/, '');
+const VERSION = getGamePanelImageVersion().replace(/^v/, '');
 
 function ovhImage(name: string): string {
   return `${REGISTRY}/${name}:${VERSION}`;

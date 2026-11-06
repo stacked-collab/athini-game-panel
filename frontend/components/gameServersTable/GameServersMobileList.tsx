@@ -1,3 +1,4 @@
+// Athini palette customization; see NOTICE.
 import { Plus } from 'lucide-react';
 import type { GameServer } from '../../types/gameServer';
 import { AppButton } from '../../src/ui/components';
@@ -29,7 +30,7 @@ export function GameServersMobileList({
         <GameServerCard key={server.id} server={server} {...cardActions} />
       ))}
 
-      <div className={`bg-[#1f2937] rounded-lg p-4 border ${cardActions.rowBorder}`}>
+      <div className={`bg-[#172b22] rounded-lg p-4 border ${cardActions.rowBorder}`}>
         <div className="flex justify-center">
           <AppButton
             type="button"
@@ -40,7 +41,7 @@ export function GameServersMobileList({
             disabled={!canOpenInstallModal}
             className={`group inline-flex min-w-[240px] items-center justify-center gap-2 rounded-md border-2 px-6 py-2 font-semibold transition-all ${
               canOpenInstallModal
-                ? 'border-[var(--color-cyan-400)]/45 bg-[#0050D7]/10 text-[var(--color-cyan-400)] hover:bg-[#157EEA]/20 hover:border-[var(--color-cyan-400)] hover:text-white'
+                ? 'border-[var(--color-cyan-400)]/45 bg-[#254c39]/10 text-[var(--color-cyan-400)] hover:bg-[#2b5440]/20 hover:border-[var(--color-cyan-400)] hover:text-white'
                 : 'bg-gray-800 text-gray-500 border-gray-700 cursor-not-allowed'
             }`}
             title={canInstall ? 'Install game server' : 'Missing permission: server.install'}

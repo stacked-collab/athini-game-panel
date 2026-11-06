@@ -1,3 +1,4 @@
+// Athini palette customization; see NOTICE.
 import { BookOpen, Video, FileText, ExternalLink, Search } from 'lucide-react';
 import { useEffect, useMemo, useState } from 'react';
 import { apiClient, type CatalogResourceItem } from '../utils/api';
@@ -13,7 +14,7 @@ export function Resources() {
   const [isLoading, setIsLoading] = useState(true);
   const [loadError, setLoadError] = useState<string | null>(null);
 
-  const cardBg = 'bg-gp-surface-card shadow-[0_4px_20px_rgba(2,6,23,0.5),0_1px_4px_rgba(2,6,23,0.3)]';
+  const cardBg = 'bg-gp-surface-card shadow-[0_4px_20px_rgba(12, 20, 16,0.5),0_1px_4px_rgba(12, 20, 16,0.3)]';
   const cardBorder = 'border-gray-800';
   const textPrimary = 'text-white';
   const textSecondary = 'text-gray-300';
@@ -163,7 +164,7 @@ export function Resources() {
 
       {isLoading && (
         <div className="px-8 pb-8">
-          <div className="bg-[#1a2332] rounded-xl p-12 text-center">
+          <div className="bg-[#172320] rounded-xl p-12 text-center">
             <p className={`${textTertiary} text-base`}>Loading resources...</p>
           </div>
         </div>
@@ -171,7 +172,7 @@ export function Resources() {
 
       {!isLoading && loadError && (
         <div className="px-8 pb-8">
-          <div className="bg-[#1a2332] rounded-xl p-12 text-center">
+          <div className="bg-[#172320] rounded-xl p-12 text-center">
             <h3 className={`text-xl font-semibold mb-3 ${textPrimary}`}>
               Unable to load resources
             </h3>
@@ -246,7 +247,7 @@ export function Resources() {
 
           {filteredResources.length === 0 && (
             <div className="px-8 pb-8">
-              <div className="bg-[#1a2332] rounded-xl p-16 text-center">
+              <div className="bg-[#172320] rounded-xl p-16 text-center">
                 <div className="bg-gray-800 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
                   <BookOpen className={`w-10 h-10 ${textTertiary}`} />
                 </div>

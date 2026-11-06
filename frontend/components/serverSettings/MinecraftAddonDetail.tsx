@@ -1,3 +1,4 @@
+// Athini palette customization; see NOTICE.
 import { useCallback, useEffect, useState } from 'react';
 import {
   AlertTriangle, ArrowLeft, CheckCircle2, ChevronDown, Download, ExternalLink, Loader2, Package, X,
@@ -139,7 +140,7 @@ export function MinecraftAddonDetail({
   const isUpdate = effInstalled && !alreadyInstalled;
   const noBuild = project ? project.compatibleVersionCount === 0 : false;
 
-  const selectCls = `w-full rounded-lg bg-white dark:bg-[#0f1723]/60 border ${borderColor} ${textPrimary} text-sm px-3 py-2 pr-8 focus:outline-none focus:ring-2 focus:ring-[var(--color-cyan-400)]/40 appearance-none cursor-pointer`;
+  const selectCls = `w-full rounded-lg bg-white dark:bg-[#15221d]/60 border ${borderColor} ${textPrimary} text-sm px-3 py-2 pr-8 focus:outline-none focus:ring-2 focus:ring-[var(--color-cyan-400)]/40 appearance-none cursor-pointer`;
 
   return (
     <div className="fixed inset-0 z-[75] flex items-center justify-center bg-black/50 backdrop-blur-sm p-0 md:p-4">

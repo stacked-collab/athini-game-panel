@@ -1,3 +1,4 @@
+// Athini palette customization; see NOTICE.
 import { useEffect, useRef, useState } from 'react';
 import { BellRing, X } from 'lucide-react';
 import { AppButton } from '../src/ui/components';
@@ -131,13 +132,13 @@ function LogPromptToastCard({
 
   return (
     <div
-      className="gp-log-prompt-toast pointer-events-auto overflow-hidden rounded-2xl border border-cyan-700/50 bg-[linear-gradient(180deg,rgba(9,19,35,0.98)_0%,rgba(6,13,25,0.98)_100%)] shadow-[0_18px_48px_rgba(0,0,0,0.45)] backdrop-blur"
+      className="gp-log-prompt-toast pointer-events-auto overflow-hidden rounded-2xl border border-cyan-700/50 bg-[linear-gradient(180deg,rgba(20, 31, 28,0.98)_0%,rgba(12, 20, 16,0.98)_100%)] shadow-[0_18px_48px_rgba(0,0,0,0.45)] backdrop-blur"
       onPointerEnter={() => setIsPaused(true)}
       onPointerLeave={() => setIsPaused(false)}
     >
       <div className="h-1 w-full bg-cyan-950/70">
         <div
-          className="gp-log-prompt-toast-bar h-full bg-[linear-gradient(90deg,#22d3ee_0%,#0891b2_100%)] transition-[width] duration-100 ease-linear"
+          className="gp-log-prompt-toast-bar h-full bg-[linear-gradient(90deg,#77dba7_0%,#254c39_100%)] transition-[width] duration-100 ease-linear"
           style={{ width: `${progress * 100}%` }}
         />
       </div>

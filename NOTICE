@@ -8,5 +8,6 @@ Licensed under the Apache License, Version 2.0. See LICENSE.
 This distribution has been modified for Athini: green navigation and interface accents,
 Athini logo and page title, removal of social/review promotion, links to Athini service
 information, and update/install repository defaults pointing to the Athini fork.
+The interface palette has also been aligned with the Athini hosting panel, including dark-green surfaces and action buttons.
 Original game/provider identifiers and upstream game-management functionality are retained.
 The Athini logo is used with the brand owner's authorization.

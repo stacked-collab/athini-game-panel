@@ -105,6 +105,10 @@ Under the hood, a **React + Vite** frontend talks to a **Node.js** backend (Expr
 - 💬 [Contact OVHcloud support](https://www.ovhcloud.com/en/contact/)
 - 🎮 [OVHcloud Discord](https://discord.gg/ovhcloud)
 
+## Planned updates
+
+See [ROADMAP.md](ROADMAP.md) for the next update, including the planned Spanish translation.
+
 ## 📄 License
 
 Licensed under the **Apache License 2.0** — see [LICENSE](LICENSE).

@@ -1,3 +1,4 @@
+// Athini palette customization; see NOTICE.
 import { useState, useEffect, useRef, useCallback } from 'react';
 import { Login } from './components/Login';
 import { ThemeProvider } from './contexts/ThemeContext';
@@ -506,7 +507,7 @@ function AppContent() {
 
   if (authChecking) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-[#0a0e1a] text-gray-300">
+      <div className="min-h-screen flex items-center justify-center bg-background text-foreground">
         <div className="text-sm">Checking session...</div>
       </div>
     );

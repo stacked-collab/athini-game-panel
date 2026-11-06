@@ -1,3 +1,4 @@
+// Athini palette customization; see NOTICE.
 import { AlertTriangle } from 'lucide-react';
 import { useEffect, useRef, useState } from 'react';
 import { AppButton } from '../src/ui/components';
@@ -130,10 +131,10 @@ export function ServerSshTerminal({ serverId, serverStatus }: ServerSshTerminalP
       fontFamily:
         '"JetBrains Mono", "Fira Code", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace',
       theme: {
-        background: '#0b1220',
-        foreground: '#eaf2ff',
+        background: '#0e1815',
+        foreground: '#dce5df',
         cursor: 'var(--color-cyan-400)',
-        selectionBackground: '#1f3b5b',
+        selectionBackground: '#254c39',
       },
     });
 
@@ -297,7 +298,7 @@ export function ServerSshTerminal({ serverId, serverStatus }: ServerSshTerminalP
       ) : serverId && isServerUpLike(serverStatus) ? (
         <div className="flex flex-col flex-1 min-h-0">
           {error && <div className="mb-3 text-xs text-red-300">{error}</div>}
-          <div className="relative flex-1 min-h-[360px] border border-gray-700 rounded-2xl overflow-hidden bg-gp-surface-input shadow-[0_0_0_1px_rgba(17,24,39,0.6),0_20px_40px_-24px_rgba(15,23,42,0.8)]">
+          <div className="relative flex-1 min-h-[360px] border border-gray-700 rounded-2xl overflow-hidden bg-gp-surface-input shadow-[0_0_0_1px_rgba(21, 34, 29,0.6),0_20px_40px_-24px_rgba(21, 34, 29,0.8)]">
             <div className="h-full w-full p-2 sm:p-3">
               <div ref={containerRef} className="h-full w-full" />
             </div>

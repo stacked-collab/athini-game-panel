@@ -1,3 +1,4 @@
+// Athini palette customization; see NOTICE.
 import {
   Check,
   ChevronRight,
@@ -434,7 +435,7 @@ export function FileManagerTab({
                   <div
                     key={index}
                     className={`w-full flex h-9 items-center gap-2 px-2 rounded-md cursor-pointer select-none transition-colors ${
-                      isDropTarget ? 'bg-[#0050D7]/20 border border-[var(--color-cyan-400)]' : hoverBg
+                      isDropTarget ? 'bg-[#254c39]/20 border border-[var(--color-cyan-400)]' : hoverBg
                     }`}
                     onClick={() => handleFileDoubleClick(file)}
                     onDragOver={handleRowDragOver(file)}
@@ -458,9 +459,9 @@ export function FileManagerTab({
                   draggable={isDraggable}
                   className={`group w-full flex h-9 items-center gap-1.5 px-2 rounded-md select-none transition-colors ${
                     isDropTarget
-                      ? 'bg-[#0050D7]/20 border border-[var(--color-cyan-400)] ring-1 ring-[var(--color-cyan-400)]'
+                      ? 'bg-[#254c39]/20 border border-[var(--color-cyan-400)] ring-1 ring-[var(--color-cyan-400)]'
                       : isSelected
-                        ? 'bg-[#0050D7]/20 border border-[var(--color-cyan-400)]'
+                        ? 'bg-[#254c39]/20 border border-[var(--color-cyan-400)]'
                         : hoverBg
                   } ${isFolder || isTouch ? 'cursor-pointer' : 'cursor-default'} ${dragSourceName === file.name ? 'opacity-50' : ''}`}
                   onClick={openOnClick ? () => handleFileDoubleClick(file) : undefined}
@@ -511,7 +512,7 @@ export function FileManagerTab({
                       <div
                         className={`w-3.5 h-3.5 flex-shrink-0 flex items-center justify-center rounded border cursor-pointer transition-colors ${
                           isSelected
-                            ? 'bg-[#0050D7] border-[var(--color-cyan-400)]'
+                            ? 'bg-[#254c39] border-[var(--color-cyan-400)]'
                             : 'border-gray-600 hover:border-gray-400'
                         }`}
                         onClick={(e) => { e.stopPropagation(); handleFileClick(file); }}

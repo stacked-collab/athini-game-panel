@@ -1,3 +1,4 @@
+// Athini palette customization; see NOTICE.
 import { useState, useRef, useEffect } from 'react';
 import { KeyRound, Moon, MoreVertical, Power, Sun, X } from 'lucide-react';
 import { Icon, type IconName } from '@ovhcloud/ods-react';
@@ -61,7 +62,7 @@ function UserMenuRow({
 
   return (
     <div className="flex items-center gap-2 px-1 py-0.5">
-      <div className="gp-user-avatar flex h-9 w-9 shrink-0 items-center justify-center rounded-full border text-sm font-semibold border-[#324666] bg-[#0f1a2b] text-[var(--color-cyan-400)]">
+      <div className="gp-user-avatar flex h-9 w-9 shrink-0 items-center justify-center rounded-full border text-sm font-semibold border-[#3c6250] bg-[#15221d] text-[var(--color-cyan-400)]">
         {currentUserInitial}
       </div>
       <p
@@ -99,12 +100,12 @@ function UserMenuRow({
         </button>
         {open && (
           <div role="menu"
-            className={`absolute bottom-full right-0 mb-3 w-44 overflow-hidden rounded-xl border shadow-lg ${isDark ? 'border-white/10 bg-[#0f1a2b]' : 'border-gray-200 bg-white'}`}>
+            className={`absolute bottom-full right-0 mb-3 w-44 overflow-hidden rounded-xl border shadow-lg ${isDark ? 'border-white/10 bg-[#15221d]' : 'border-gray-200 bg-white'}`}>
             <button
               type="button"
               role="menuitem"
               onClick={() => { setOpen(false); onChangePassword?.(); }}
-              className={`flex w-full items-center gap-2.5 px-3 py-2.5 text-sm font-medium transition-colors ${isDark ? 'text-[#eef4fa] hover:bg-[#1c2e47]' : 'text-gray-800 hover:bg-gray-100'}`}
+              className={`flex w-full items-center gap-2.5 px-3 py-2.5 text-sm font-medium transition-colors ${isDark ? 'text-[#dce5df] hover:bg-[#172320]' : 'text-gray-800 hover:bg-gray-100'}`}
             >
               <KeyRound className="h-4 w-4 text-[var(--color-cyan-400)]" />
               Change password

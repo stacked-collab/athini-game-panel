@@ -1,3 +1,4 @@
+// Athini palette customization; see NOTICE.
 import { useEffect, useRef, useState } from 'react';
 import {
   AlertTriangle, CheckCircle, Clock, GripVertical, Loader2, Pencil, Plus,
@@ -195,14 +196,14 @@ function SortableStep({
           type="text" placeholder="say Hello"
           value={step.command ?? ''}
           onChange={(e) => onUpdate(index, { ...step, command: e.target.value })}
-          className={`flex-1 rounded bg-white dark:bg-[#0f1723]/60 border ${borderColor} ${textPrimary} text-xs px-2 py-1.5 focus:outline-none focus:ring-1 focus:ring-[var(--gp-ods-accent-primary)]`}
+          className={`flex-1 rounded bg-white dark:bg-[#15221d]/60 border ${borderColor} ${textPrimary} text-xs px-2 py-1.5 focus:outline-none focus:ring-1 focus:ring-[var(--gp-ods-accent-primary)]`}
         />
       ) : (
         <input
           type="number" min="1" placeholder="30"
           value={step.seconds ?? ''}
           onChange={(e) => onUpdate(index, { ...step, seconds: parseInt(e.target.value) || 1 })}
-          className={`w-24 rounded bg-white dark:bg-[#0f1723]/60 border ${borderColor} ${textPrimary} text-xs px-2 py-1.5 focus:outline-none focus:ring-1 focus:ring-[var(--gp-ods-accent-primary)]`}
+          className={`w-24 rounded bg-white dark:bg-[#15221d]/60 border ${borderColor} ${textPrimary} text-xs px-2 py-1.5 focus:outline-none focus:ring-1 focus:ring-[var(--gp-ods-accent-primary)]`}
         />
       )}
       {step.type === 'sleep' && (
@@ -434,7 +435,7 @@ export function ScheduledTasksTab({
     }
   };
 
-  const inputCls = `w-full rounded-lg bg-white dark:bg-[#0f1723]/60 border ${inputBorder} ${textPrimary} text-sm px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[var(--gp-ods-accent-primary)] focus:border-transparent transition-all`;
+  const inputCls = `w-full rounded-lg bg-white dark:bg-[#15221d]/60 border ${inputBorder} ${textPrimary} text-sm px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[var(--gp-ods-accent-primary)] focus:border-transparent transition-all`;
 
   const availableTypes: Array<{ value: TaskForm['type']; label: string }> = [
     { value: 'restart', label: 'Restart' },

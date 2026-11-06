@@ -1,3 +1,4 @@
+// Athini palette customization; see NOTICE.
 import { useState } from 'react';
 import { ArrowUpCircle, CheckCircle2, RefreshCw, X, AlertTriangle } from 'lucide-react';
 import {
@@ -26,7 +27,7 @@ function ReleaseNotesBlock({ release, isDark, heading }: { release: ReleaseNotes
       {hasMeta && (
         <div className="flex flex-wrap items-center gap-2">
           {heading && (
-            <span className={`text-xs font-medium uppercase tracking-wide ${isDark ? 'text-slate-500' : 'text-[#94a3b8]'}`}>
+            <span className={`text-xs font-medium uppercase tracking-wide ${isDark ? 'text-slate-500' : 'text-[#a7b6ad]'}`}>
               {heading}
             </span>
           )}
@@ -40,7 +41,7 @@ function ReleaseNotesBlock({ release, isDark, heading }: { release: ReleaseNotes
               href={release.htmlUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="ml-auto text-[11px] text-[#157EEA] hover:underline"
+              className="ml-auto text-[11px] text-[#2b5440] hover:underline"
             >
               View on GitHub
             </a>
@@ -48,8 +49,8 @@ function ReleaseNotesBlock({ release, isDark, heading }: { release: ReleaseNotes
         </div>
       )}
       {release.body
-        ? <Markdown className={isDark ? 'text-slate-300' : 'text-[#475569]'}>{release.body}</Markdown>
-        : <p className={`text-xs ${isDark ? 'text-slate-500' : 'text-[#94a3b8]'}`}>No release notes available.</p>}
+        ? <Markdown className={isDark ? 'text-slate-300' : 'text-[#52695b]'}>{release.body}</Markdown>
+        : <p className={`text-xs ${isDark ? 'text-slate-500' : 'text-[#a7b6ad]'}`}>No release notes available.</p>}
     </div>
   );
 }
@@ -94,21 +95,21 @@ export function PanelUpdateModal({ isOpen, onClose, updateInfo }: PanelUpdateMod
         dismissible={false}
         className={`z-[61] flex max-h-[90vh] w-[calc(100%-2rem)] max-w-2xl flex-col overflow-hidden rounded-xl border shadow-xl ${
           isDark
-            ? 'border-white/10 bg-[#0d1524]'
-            : 'border-[#e2e8f0] bg-white'
+            ? 'border-white/10 bg-[#141f1c]'
+            : 'border-[#dce5df] bg-white'
         }`}
       >
         <AppModalHeader
           className={`flex shrink-0 items-center justify-between border-b px-5 py-4 ${
-            isDark ? 'border-white/10 bg-[#101a2d]' : 'border-[#e2e8f0] bg-[#f8fafc]'
+            isDark ? 'border-white/10 bg-[#172320]' : 'border-[#dce5df] bg-[#fafcf8]'
           }`}
         >
           <div className="flex items-center gap-3">
-            <div className={`rounded-full p-2 ${isDark ? 'bg-[#0050D7]/20' : 'bg-blue-50'}`}>
-              <ArrowUpCircle className="h-5 w-5 text-[#157EEA]" />
+            <div className={`rounded-full p-2 ${isDark ? 'bg-[#254c39]/20' : 'bg-blue-50'}`}>
+              <ArrowUpCircle className="h-5 w-5 text-[#2b5440]" />
             </div>
             <div>
-              <AppModalTitle className={`text-base font-semibold ${isDark ? 'text-white' : 'text-[#0f172a]'}`}>
+              <AppModalTitle className={`text-base font-semibold ${isDark ? 'text-white' : 'text-[#15221d]'}`}>
                 Panel Update
               </AppModalTitle>
             </div>
@@ -120,7 +121,7 @@ export function PanelUpdateModal({ isOpen, onClose, updateInfo }: PanelUpdateMod
             className={`rounded border-none bg-transparent p-2 transition-colors ${
               isDark
                 ? 'text-gray-400 hover:bg-gray-700 hover:text-red-400'
-                : 'text-[#94a3b8] hover:bg-[#f0f4f8] hover:text-[#dc2626]'
+                : 'text-[#a7b6ad] hover:bg-[#f1f5f1] hover:text-[#dc2626]'
             }`}
             aria-label="Close"
           >
@@ -135,10 +136,10 @@ export function PanelUpdateModal({ isOpen, onClose, updateInfo }: PanelUpdateMod
                 <CheckCircle2 className="h-7 w-7 text-green-400" />
               </div>
               <div className="space-y-2">
-                <p className={`text-sm font-semibold ${isDark ? 'text-white' : 'text-[#0f172a]'}`}>
+                <p className={`text-sm font-semibold ${isDark ? 'text-white' : 'text-[#15221d]'}`}>
                   Update started
                 </p>
-                <p className={`text-sm leading-relaxed ${isDark ? 'text-slate-300' : 'text-[#475569]'}`}>
+                <p className={`text-sm leading-relaxed ${isDark ? 'text-slate-300' : 'text-[#52695b]'}`}>
                   The panel may be unavailable for a few minutes.
                   <br />
                   Refresh this page after the service comes back.
@@ -162,10 +163,10 @@ export function PanelUpdateModal({ isOpen, onClose, updateInfo }: PanelUpdateMod
                   <AlertTriangle className="h-5 w-5 text-red-400" />
                 </div>
                 <div className="space-y-1">
-                  <p className={`text-sm font-semibold ${isDark ? 'text-white' : 'text-[#0f172a]'}`}>
+                  <p className={`text-sm font-semibold ${isDark ? 'text-white' : 'text-[#15221d]'}`}>
                     Update failed to start
                   </p>
-                  <p className={`text-sm ${isDark ? 'text-slate-300' : 'text-[#475569]'}`}>
+                  <p className={`text-sm ${isDark ? 'text-slate-300' : 'text-[#52695b]'}`}>
                     {errorMessage}
                   </p>
                 </div>
@@ -194,7 +195,7 @@ export function PanelUpdateModal({ isOpen, onClose, updateInfo }: PanelUpdateMod
           {(state === 'idle' || state === 'starting') && (noUpdate || noLatest) && (
             <div className="flex flex-col gap-4">
               <div className={`rounded-lg border px-4 py-3 text-sm ${
-                isDark ? 'border-white/10 bg-white/5 text-slate-300' : 'border-[#e2e8f0] bg-[#f8fafc] text-[#475569]'
+                isDark ? 'border-white/10 bg-white/5 text-slate-300' : 'border-[#dce5df] bg-[#fafcf8] text-[#52695b]'
               }`}>
                 {noLatest
                   ? 'Up to date — no newer release found.'
@@ -214,23 +215,23 @@ export function PanelUpdateModal({ isOpen, onClose, updateInfo }: PanelUpdateMod
           {(state === 'idle' || state === 'starting') && updateInfo?.updateAvailable && (
             <div className="flex flex-col gap-4">
               <div className={`rounded-lg border px-4 py-4 ${
-                isDark ? 'border-white/10 bg-white/5' : 'border-[#e2e8f0] bg-[#f8fafc]'
+                isDark ? 'border-white/10 bg-white/5' : 'border-[#dce5df] bg-[#fafcf8]'
               }`}>
                 <div className="flex items-center justify-between">
                   <div className="space-y-0.5">
-                    <p className={`text-xs font-medium uppercase tracking-wide ${isDark ? 'text-slate-500' : 'text-[#94a3b8]'}`}>
+                    <p className={`text-xs font-medium uppercase tracking-wide ${isDark ? 'text-slate-500' : 'text-[#a7b6ad]'}`}>
                       Current version
                     </p>
-                    <p className={`text-sm font-semibold ${isDark ? 'text-white' : 'text-[#0f172a]'}`}>
+                    <p className={`text-sm font-semibold ${isDark ? 'text-white' : 'text-[#15221d]'}`}>
                       v{updateInfo.currentVersion}
                     </p>
                   </div>
-                  <ArrowUpCircle className="h-5 w-5 text-[#157EEA]" />
+                  <ArrowUpCircle className="h-5 w-5 text-[#2b5440]" />
                   <div className="space-y-0.5 text-right">
-                    <p className={`text-xs font-medium uppercase tracking-wide ${isDark ? 'text-slate-500' : 'text-[#94a3b8]'}`}>
+                    <p className={`text-xs font-medium uppercase tracking-wide ${isDark ? 'text-slate-500' : 'text-[#a7b6ad]'}`}>
                       Latest version
                     </p>
-                    <p className="text-sm font-semibold text-[#157EEA]">
+                    <p className="text-sm font-semibold text-[#2b5440]">
                       v{updateInfo.latestVersion}
                     </p>
                   </div>
@@ -241,7 +242,7 @@ export function PanelUpdateModal({ isOpen, onClose, updateInfo }: PanelUpdateMod
                 <div className="space-y-4">
                   {updateInfo.newerReleases?.length > 0 && (
                     <div className="space-y-3">
-                      <p className={`text-xs font-medium uppercase tracking-wide ${isDark ? 'text-slate-500' : 'text-[#94a3b8]'}`}>
+                      <p className={`text-xs font-medium uppercase tracking-wide ${isDark ? 'text-slate-500' : 'text-[#a7b6ad]'}`}>
                         What&apos;s new
                       </p>
                       {updateInfo.newerReleases.map((release) => (
@@ -257,7 +258,7 @@ export function PanelUpdateModal({ isOpen, onClose, updateInfo }: PanelUpdateMod
                 </div>
               )}
 
-              <p className={`text-xs leading-relaxed ${isDark ? 'text-slate-400' : 'text-[#64748b]'}`}>
+              <p className={`text-xs leading-relaxed ${isDark ? 'text-slate-400' : 'text-[#72877a]'}`}>
                 The backend, frontend, and Traefik stack will restart during the update.
                 HTTP requests and WebSocket connections may be interrupted. This is expected.
               </p>
@@ -297,8 +298,8 @@ export function PanelUpdateModal({ isOpen, onClose, updateInfo }: PanelUpdateMod
 
           {!updateInfo && (state === 'idle' || state === 'starting') && (
             <div className="flex flex-col gap-3 py-2">
-              <div className={`h-16 animate-pulse rounded-lg ${isDark ? 'bg-white/5' : 'bg-[#f1f5f9]'}`} />
-              <div className={`h-4 w-2/3 animate-pulse rounded ${isDark ? 'bg-white/5' : 'bg-[#f1f5f9]'}`} />
+              <div className={`h-16 animate-pulse rounded-lg ${isDark ? 'bg-white/5' : 'bg-[#fafcf8]'}`} />
+              <div className={`h-4 w-2/3 animate-pulse rounded ${isDark ? 'bg-white/5' : 'bg-[#fafcf8]'}`} />
             </div>
           )}
         </AppModalBody>

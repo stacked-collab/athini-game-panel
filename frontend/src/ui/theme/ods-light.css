@@ -1,48 +1,49 @@
+/* Athini palette customization; see NOTICE. */
 /*
  * Game Panel — Light mode layer
  *
  * Overrides ods-dark.css when the .dark class is absent.
  * Does NOT modify any dark-mode rule — purely additive.
  *
- * Palette: OVHcloud blue (#0050d7) as primary accent,
+ * Palette: Athini green (#254c39) as primary accent,
  * clean whites/grays for surfaces, navy for text.
  */
 
 @layer base {
   html:not(.dark),
   html:not(.dark) body {
-    --ods-theme-background-color: #f5f7fa;
+    --ods-theme-background-color: #f6f8f3;
     --ods-theme-backdrop-background-color: rgba(0, 0, 0, 0.3);
     --ods-theme-backdrop-opacity: 0.4;
-    --ods-theme-heading-text-color: #0f172a;
+    --ods-theme-heading-text-color: #15221d;
     --ods-theme-overlay-z-index: 120;
-    --ods-theme-text-color: #475569;
-    --ods-theme-border-color-disabled: #e2e8f0;
-    --ods-theme-border-color-readonly: #e2e8f0;
+    --ods-theme-text-color: #52695b;
+    --ods-theme-border-color-disabled: #dce5df;
+    --ods-theme-border-color-readonly: #dce5df;
     --ods-theme-border-color-selected: var(--gp-ods-accent-primary);
     --ods-theme-input-background-color-checked: var(--gp-ods-accent-primary);
     --ods-theme-input-background-color-checked-hover: var(--gp-ods-accent-secondary);
-    --ods-theme-input-border-color: #cbd5e1;
-    --ods-theme-input-border-color-hover: #94a3b8;
+    --ods-theme-input-border-color: #c4d3c9;
+    --ods-theme-input-border-color-hover: #a7b6ad;
     --ods-theme-input-border-color-checked: var(--gp-ods-accent-primary);
     --ods-theme-input-border-color-checked-hover: var(--gp-ods-accent-secondary);
-    --ods-theme-input-option-background-color-hover: #f0f4f8;
+    --ods-theme-input-option-background-color-hover: #f1f5f1;
     --ods-theme-input-option-background-color-selected: color-mix(in srgb, var(--gp-ods-accent-primary) 10%, transparent);
     --ods-theme-input-option-background-color-selected-hover: color-mix(in srgb, var(--gp-ods-accent-primary) 16%, transparent);
-    --ods-theme-input-placeholder-text-color: #94a3b8;
-    --ods-theme-input-text-color: #0f172a;
+    --ods-theme-input-placeholder-text-color: #a7b6ad;
+    --ods-theme-input-text-color: #15221d;
     --ods-theme-input-text-color-checked: #ffffff;
-    --ods-theme-split-border-color: #e2e8f0;
+    --ods-theme-split-border-color: #dce5df;
     --ods-theme-anchor-text-color: var(--gp-ods-accent-primary);
     --ods-theme-anchor-text-color-hover: var(--gp-primary-600);
     --ods-color-form-element-background-default: #ffffff;
     --ods-color-form-element-background-hover-default: #ffffff;
     --ods-color-form-element-background-focus-default: #ffffff;
-    --ods-color-form-element-border-default: #cbd5e1;
-    --ods-color-form-element-border-hover-default: #94a3b8;
+    --ods-color-form-element-border-default: #c4d3c9;
+    --ods-color-form-element-border-hover-default: #a7b6ad;
     --ods-color-form-element-border-focus-default: var(--gp-ods-accent-primary);
-    --ods-color-form-element-text-default: #0f172a;
-    --ods-color-form-element-text-placeholder-default: #94a3b8;
+    --ods-color-form-element-text-default: #15221d;
+    --ods-color-form-element-text-placeholder-default: #a7b6ad;
     --ods-theme-outline-color: var(--gp-ods-accent-primary);
   }
 }
@@ -51,38 +52,38 @@
   /* ── Cards ── */
   html:not(.dark) .gp-app-card[data-ods='card'] {
     background: #ffffff;
-    border: 1px solid #e2e8f0;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06), 0 0 0 1px rgba(0, 80, 215, 0.04) inset;
-    color: #0f172a;
+    border: 1px solid #dce5df;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06), 0 0 0 1px rgba(37, 76, 57, 0.04) inset;
+    color: #15221d;
   }
 
   /* ── Tables ── */
   html:not(.dark) .gp-app-table[data-ods='table'] {
-    color: #0f172a;
-    --ods-table-border-color: #e2e8f0;
-    --ods-table-head-background-color: #f8fafc;
-    --ods-table-striped-background-color: #fafbfc;
+    color: #15221d;
+    --ods-table-border-color: #dce5df;
+    --ods-table-head-background-color: #fafcf8;
+    --ods-table-striped-background-color: #fafcf8;
   }
 
   html:not(.dark) .gp-app-table[data-ods='table'] th {
-    color: #64748b;
-    background: #f8fafc;
+    color: #72877a;
+    background: #fafcf8;
   }
 
   html:not(.dark) .gp-app-table[data-ods='table'] thead tr th {
-    background: #f8fafc;
-    color: #64748b;
-    border-color: #e2e8f0;
+    background: #fafcf8;
+    color: #72877a;
+    border-color: #dce5df;
   }
 
   html:not(.dark) .gp-app-table[data-ods='table'] tbody tr td,
   html:not(.dark) .gp-app-table[data-ods='table'] tbody tr th {
-    border-color: #e2e8f0;
-    color: #0f172a;
+    border-color: #dce5df;
+    color: #15221d;
   }
 
   html:not(.dark) .gp-app-table[data-ods='table'] tr:hover {
-    background: rgba(0, 80, 215, 0.04);
+    background: rgba(37, 76, 57, 0.04);
   }
 
   /* ── Buttons ── */
@@ -128,8 +129,8 @@
 
   html:not(.dark) .gp-app-button--neutral[data-ods='button'] {
     background: #ffffff;
-    border-color: #cbd5e1;
-    color: #334155;
+    border-color: #c4d3c9;
+    color: #30473b;
     padding-inline: 1.25rem;
     padding-block: 0.625rem;
   }
@@ -140,7 +141,7 @@
   }
 
   html:not(.dark) .gp-app-button--ghost[data-ods='button'] {
-    color: #475569;
+    color: #52695b;
   }
 
   /* ── Badges ── */
@@ -153,8 +154,8 @@
 
   html:not(.dark) .gp-status-badge--offline[data-ods='badge'],
   html:not(.dark) .gp-status-badge--disabled[data-ods='badge'] {
-    background: rgba(100, 116, 139, 0.12);
-    color: #64748b;
+    background: rgba(114, 135, 122, 0.12);
+    color: #72877a;
   }
 
   html:not(.dark) .gp-status-badge--starting[data-ods='badge'],
@@ -173,8 +174,8 @@
   html:not(.dark) .gp-app-input[data-ods='input'],
   html:not(.dark) .gp-app-textarea[data-ods='textarea'] {
     background: #ffffff;
-    border-color: #cbd5e1;
-    color: #0f172a;
+    border-color: #c4d3c9;
+    color: #15221d;
   }
 
   /* ── Tabs ── */
@@ -186,39 +187,39 @@
   /* ── Modals ── */
   html:not(.dark) .gp-app-modal-content[data-ods='modal-content'] {
     background: #ffffff;
-    border: 1px solid #e2e8f0;
-    color: #0f172a;
+    border: 1px solid #dce5df;
+    color: #15221d;
   }
 
   /* ── Selects ── */
   html:not(.dark) .gp-app-select-control[data-ods='select-control'] {
     background: #ffffff;
-    border-color: #cbd5e1;
-    color: #0f172a;
+    border-color: #c4d3c9;
+    color: #15221d;
   }
 
   html:not(.dark) .gp-resources-select[data-ods='select'] .gp-app-select-control[data-ods='select-control'] {
-    border-color: #cbd5e1;
-    background: #f8fafc;
+    border-color: #c4d3c9;
+    background: #fafcf8;
   }
 
   html:not(.dark) .gp-resources-select[data-ods='select']
     .gp-app-select-control[data-ods='select-control'][data-state='open'] {
-    box-shadow: 0 0 0 2px rgba(0, 80, 213, 0.2);
+    box-shadow: 0 0 0 2px rgba(37, 76, 57, 0.2);
   }
 
   html:not(.dark) .gp-app-select[data-ods='select'] [data-ods='select-content'] {
     background: #ffffff;
-    border-color: #e2e8f0;
+    border-color: #dce5df;
     box-shadow: 0 10px 24px rgba(0, 0, 0, 0.1);
   }
 
   html:not(.dark) .gp-app-select[data-ods='select'] [data-ods='select-content'] [role='option'] {
-    color: #0f172a;
+    color: #15221d;
   }
 
   html:not(.dark) .gp-app-select[data-ods='select'] [data-ods='select-content'] [role='option'][data-highlighted] {
-    background: #f0f4f8;
+    background: #f1f5f1;
   }
 
   html:not(.dark) .gp-app-select[data-ods='select'] [data-ods='select-content'] [role='option'][data-state='checked'] {
@@ -234,60 +235,60 @@
 
   /* ── Game config select ── */
   html:not(.dark) .gp-game-config-select[data-ods='select'] .gp-app-select-control[data-ods='select-control'] {
-    border-color: #8ea0bd;
+    border-color: #91a399;
     background: #ffffff;
-    box-shadow: inset 0 1px 0 rgba(0, 80, 215, 0.04);
+    box-shadow: inset 0 1px 0 rgba(37, 76, 57, 0.04);
   }
 
   html:not(.dark) .gp-game-config-select[data-ods='select'] .gp-app-select-control[data-ods='select-control']:hover {
-    border-color: #6b7c99;
+    border-color: #72877a;
   }
 
   html:not(.dark) .gp-game-config-select[data-ods='select']
     .gp-app-select-control[data-ods='select-control'][data-state='open'] {
     box-shadow:
-      inset 0 1px 0 rgba(0, 80, 215, 0.06),
-      0 0 0 2px rgba(0, 80, 215, 0.12);
+      inset 0 1px 0 rgba(37, 76, 57, 0.06),
+      0 0 0 2px rgba(37, 76, 57, 0.12);
   }
 
   html:not(.dark) .gp-game-config-select[data-ods='select'] [data-ods='select-content'] {
     background: #ffffff;
-    border-color: #e2e8f0;
+    border-color: #dce5df;
     box-shadow: 0 12px 28px rgba(0, 0, 0, 0.1);
   }
 
   /* ── Combobox (typable select) ── */
   html:not(.dark) .gp-app-combobox-control[data-ods='combobox-control'] {
     background: #ffffff;
-    border-color: #cbd5e1;
-    color: #0f172a;
+    border-color: #c4d3c9;
+    color: #15221d;
   }
 
   html:not(.dark) .gp-app-combobox[data-ods='combobox'] [data-ods='combobox-content'] {
     background: #ffffff;
-    border-color: #e2e8f0;
-    color: #0f172a;
+    border-color: #dce5df;
+    color: #15221d;
     box-shadow: 0 12px 28px rgba(0, 0, 0, 0.1);
   }
 
   html:not(.dark) .gp-app-combobox[data-ods='combobox'] [data-ods='combobox-content'] [role='option'] {
-    color: #0f172a;
+    color: #15221d;
   }
 
   html:not(.dark) .gp-game-config-combobox .gp-app-combobox-control[data-ods='combobox-control'] {
-    border-color: #8ea0bd;
+    border-color: #91a399;
     background: #ffffff;
-    box-shadow: inset 0 1px 0 rgba(0, 80, 215, 0.04);
+    box-shadow: inset 0 1px 0 rgba(37, 76, 57, 0.04);
   }
 
   html:not(.dark) .gp-game-config-combobox .gp-app-combobox-control[data-ods='combobox-control']:hover {
-    border-color: #6b7c99;
+    border-color: #72877a;
   }
 
   html:not(.dark) .gp-game-config-combobox .gp-app-combobox-control[data-ods='combobox-control']:focus-within {
     box-shadow:
-      inset 0 1px 0 rgba(0, 80, 215, 0.06),
-      0 0 0 2px rgba(0, 80, 215, 0.12);
+      inset 0 1px 0 rgba(37, 76, 57, 0.06),
+      0 0 0 2px rgba(37, 76, 57, 0.12);
   }
 
 
@@ -302,19 +303,19 @@
 
   /* ── Toggle ── */
   html:not(.dark) .gp-app-toggle-control[data-ods='toggle-control'] {
-    --ods-toggle-control-background-color: #cbd5e1;
-    --ods-toggle-control-background-color-hover: #94a3b8;
-    --ods-toggle-control-border-color: #cbd5e1;
-    --ods-toggle-control-border-color-hover: #94a3b8;
+    --ods-toggle-control-background-color: #c4d3c9;
+    --ods-toggle-control-background-color-hover: #a7b6ad;
+    --ods-toggle-control-border-color: #c4d3c9;
+    --ods-toggle-control-border-color-hover: #a7b6ad;
     --ods-toggle-control-thumb-background-color: #ffffff;
   }
 
   html:not(.dark) .gp-app-toggle[data-disabled] .gp-app-toggle-control[data-ods='toggle-control'] {
-    border-color: #e2e8f0;
-    background-color: #e2e8f0;
+    border-color: #dce5df;
+    background-color: #dce5df;
   }
 
   html:not(.dark) .gp-app-toggle-label[data-ods='toggle-label'] {
-    color: #475569;
+    color: #52695b;
   }
 }

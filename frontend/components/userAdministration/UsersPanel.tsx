@@ -1,3 +1,4 @@
+// Athini palette customization; see NOTICE.
 import { Plus, Settings2, Shield, Users } from 'lucide-react';
 import { Icon } from '@ovhcloud/ods-react';
 import { AppButton, AppCard } from '../../src/ui/components';
@@ -63,7 +64,7 @@ export function UsersPanel({
               setCreateModalOpen(true);
             }}
             disabled={userLimitReached}
-            className="inline-flex h-10 items-center justify-center gap-2 rounded-md border border-[var(--color-cyan-400)]/55 bg-[#0b1728] px-4 text-sm font-semibold text-[var(--color-cyan-400)] transition-colors hover:border-[var(--color-cyan-400)] hover:text-[var(--color-cyan-400)] disabled:cursor-not-allowed disabled:opacity-50"
+            className="inline-flex h-10 items-center justify-center gap-2 rounded-md border border-[var(--color-cyan-400)]/55 bg-[#141f1c] px-4 text-sm font-semibold text-[var(--color-cyan-400)] transition-colors hover:border-[var(--color-cyan-400)] hover:text-[var(--color-cyan-400)] disabled:cursor-not-allowed disabled:opacity-50"
           >
             <Plus className="h-4 w-4" />
             Create user
@@ -83,7 +84,7 @@ export function UsersPanel({
           >
             <div className="flex items-center justify-between gap-4">
               <div className="flex min-w-0 items-center gap-4">
-                <span className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-gray-600 bg-[#1f2937] text-sm font-semibold uppercase text-gray-200">
+                <span className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-gray-600 bg-[#172b22] text-sm font-semibold uppercase text-gray-200">
                   {u.username.charAt(0)}
                 </span>
                 <div className="min-w-0">
@@ -106,7 +107,7 @@ export function UsersPanel({
                   <AppButton
                     type="button"
                     onClick={() => openUserEdit(u)}
-                    className="inline-flex h-10 shrink-0 items-center gap-2 rounded-md border border-gray-600 bg-[#111827] px-3.5 text-sm text-gray-200 hover:border-[var(--color-cyan-400)] hover:text-[var(--color-cyan-400)]"
+                    className="inline-flex h-10 shrink-0 items-center gap-2 rounded-md border border-gray-600 bg-[#15221d] px-3.5 text-sm text-gray-200 hover:border-[var(--color-cyan-400)] hover:text-[var(--color-cyan-400)]"
                   >
                     <Settings2 className="h-4 w-4" />
                     Edit

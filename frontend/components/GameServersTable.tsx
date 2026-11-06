@@ -1,3 +1,4 @@
+// Athini palette customization; see NOTICE.
 import type { GameServer, GameServerStatus, ServerPlayers } from '../types/gameServer';
 import { lazy, Suspense, useDeferredValue, useState, useMemo, useEffect, useRef } from 'react';
 import { ServerSettingsModal } from './ServerSettingsModal';
@@ -536,7 +537,7 @@ export function GameServersTable({
 
   const cardBg = 'bg-gp-surface-card';
   const cardBorder = 'border-gray-800';
-  const cardShadow = 'shadow-[0_4px_24px_rgba(2,6,23,0.55),0_1px_4px_rgba(2,6,23,0.3)]';
+  const cardShadow = 'shadow-[0_4px_24px_rgba(12, 20, 16,0.55),0_1px_4px_rgba(12, 20, 16,0.3)]';
   const textPrimary = 'text-white';
   const textSecondary = 'text-gray-300';
   const textTertiary = 'text-gray-400';

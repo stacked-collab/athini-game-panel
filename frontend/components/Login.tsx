@@ -60,7 +60,7 @@ export function Login({ onLogin }: LoginProps) {
   return (
     <div
       className="min-h-screen flex items-center justify-center px-4"
-      style={{ background: 'linear-gradient(135deg, #12201b 0%, #254c39 100%)' }}
+      style={{ background: 'radial-gradient(ellipse at 15% 0%, rgba(36,83,58,.18), transparent 58%), #0e1815' }}
     >
       <div className="w-full max-w-md">
         <div className="mb-8 flex flex-col items-center gap-3">
@@ -90,12 +90,12 @@ export function Login({ onLogin }: LoginProps) {
               )}
 
               <div className="space-y-1.5">
-                <label htmlFor="username" className="block text-sm font-medium" style={{ color: '#1e293b' }}>
+                <label htmlFor="username" className="block text-sm font-medium" style={{ color: '#172b22' }}>
                   Username
                 </label>
                 <div className="relative">
                   <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
-                    <User className="h-4 w-4" style={{ color: '#94a3b8' }} />
+                    <User className="h-4 w-4" style={{ color: '#a7b6ad' }} />
                   </div>
                   <input
                     id="username"
@@ -106,9 +106,9 @@ export function Login({ onLogin }: LoginProps) {
                     autoComplete="username"
                     className="w-full rounded-lg py-2.5 pl-9 pr-4 text-sm transition-all focus:outline-none"
                     style={{
-                      background: showError ? '#fff5f5' : '#f8fafc',
-                      border: `1px solid ${showError ? '#fca5a5' : '#cbd5e1'}`,
-                      color: '#0f172a',
+                      background: showError ? '#fff5f5' : '#fafcf8',
+                      border: `1px solid ${showError ? '#fca5a5' : '#c4d3c9'}`,
+                      color: '#15221d',
                     }}
                     onFocus={(e) => {
                       e.currentTarget.style.borderColor = showError ? '#f87171' : '#1e7f4f';
@@ -117,7 +117,7 @@ export function Login({ onLogin }: LoginProps) {
                         : '0 0 0 3px rgba(30,127,79,0.12)';
                     }}
                     onBlur={(e) => {
-                      e.currentTarget.style.borderColor = showError ? '#fca5a5' : '#cbd5e1';
+                      e.currentTarget.style.borderColor = showError ? '#fca5a5' : '#c4d3c9';
                       e.currentTarget.style.boxShadow = 'none';
                     }}
                   />
@@ -125,12 +125,12 @@ export function Login({ onLogin }: LoginProps) {
               </div>
 
               <div className="space-y-1.5">
-                <label htmlFor="password" className="block text-sm font-medium" style={{ color: '#1e293b' }}>
+                <label htmlFor="password" className="block text-sm font-medium" style={{ color: '#172b22' }}>
                   Password
                 </label>
                 <div className="relative">
                   <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
-                    <Lock className="h-4 w-4" style={{ color: '#94a3b8' }} />
+                    <Lock className="h-4 w-4" style={{ color: '#a7b6ad' }} />
                   </div>
                   <input
                     id="password"
@@ -141,9 +141,9 @@ export function Login({ onLogin }: LoginProps) {
                     autoComplete="current-password"
                     className="w-full rounded-lg py-2.5 pl-9 pr-10 text-sm transition-all focus:outline-none"
                     style={{
-                      background: showError ? '#fff5f5' : '#f8fafc',
-                      border: `1px solid ${showError ? '#fca5a5' : '#cbd5e1'}`,
-                      color: '#0f172a',
+                      background: showError ? '#fff5f5' : '#fafcf8',
+                      border: `1px solid ${showError ? '#fca5a5' : '#c4d3c9'}`,
+                      color: '#15221d',
                     }}
                     onFocus={(e) => {
                       e.currentTarget.style.borderColor = showError ? '#f87171' : '#1e7f4f';
@@ -152,7 +152,7 @@ export function Login({ onLogin }: LoginProps) {
                         : '0 0 0 3px rgba(30,127,79,0.12)';
                     }}
                     onBlur={(e) => {
-                      e.currentTarget.style.borderColor = showError ? '#fca5a5' : '#cbd5e1';
+                      e.currentTarget.style.borderColor = showError ? '#fca5a5' : '#c4d3c9';
                       e.currentTarget.style.boxShadow = 'none';
                     }}
                   />
@@ -160,9 +160,9 @@ export function Login({ onLogin }: LoginProps) {
                     type="button"
                     onClick={() => setShowPassword(!showPassword)}
                     className="absolute inset-y-0 right-0 flex items-center pr-3 transition-colors"
-                    style={{ color: '#94a3b8', background: 'transparent', border: 'none' }}
+                    style={{ color: '#a7b6ad', background: 'transparent', border: 'none' }}
                     onMouseEnter={(e) => (e.currentTarget.style.color = '#1e7f4f')}
-                    onMouseLeave={(e) => (e.currentTarget.style.color = '#94a3b8')}
+                    onMouseLeave={(e) => (e.currentTarget.style.color = '#a7b6ad')}
                   >
                     {showPassword ? <EyeOff className="h-4 w-4" /> : <Eye className="h-4 w-4" />}
                   </button>
@@ -174,17 +174,17 @@ export function Login({ onLogin }: LoginProps) {
                 disabled={loading}
                 className="mt-2 w-full rounded-lg py-2.5 text-sm font-semibold transition-all"
                 style={{
-                  background: loading ? '#94a3b8' : 'linear-gradient(135deg, #254c39 0%, #1e7f4f 100%)',
+                  background: loading ? '#91a399' : '#254c39',
                   cursor: loading ? 'not-allowed' : 'pointer',
-                  border: 'none',
-                  boxShadow: loading ? 'none' : '0 2px 8px rgba(30,127,79,0.30)',
+                  border: '1px solid #3c6250',
+                  boxShadow: 'none',
                   color: '#ffffff',
                 }}
                 onMouseEnter={(e) => {
-                  if (!loading) e.currentTarget.style.background = 'linear-gradient(135deg, #1c3a2c 0%, #196840 100%)';
+                  if (!loading) e.currentTarget.style.background = '#2b5440';
                 }}
                 onMouseLeave={(e) => {
-                  if (!loading) e.currentTarget.style.background = 'linear-gradient(135deg, #254c39 0%, #1e7f4f 100%)';
+                  if (!loading) e.currentTarget.style.background = '#254c39';
                 }}
               >
                 {loading ? 'Signing in…' : 'Sign In'}

@@ -1,3 +1,4 @@
+// Athini palette customization; see NOTICE.
 import { useCallback, useEffect, useRef, useState } from 'react';
 import {
   AlertTriangle, CheckCircle2, ChevronDown, Download, FileCode2, Loader2, Package,
@@ -134,7 +135,7 @@ function AddonBrowser({
   const detailInstalledMap = new Map(installedByProject);
   for (const id of installedIds) if (!detailInstalledMap.has(id)) detailInstalledMap.set(id, null);
 
-  const selectCls = `rounded-lg bg-white dark:bg-[#0f1723]/60 border ${borderColor} ${textPrimary} text-sm pl-2.5 pr-8 py-2 focus:outline-none focus:ring-2 focus:ring-[var(--color-cyan-400)]/40 appearance-none cursor-pointer`;
+  const selectCls = `rounded-lg bg-white dark:bg-[#15221d]/60 border ${borderColor} ${textPrimary} text-sm pl-2.5 pr-8 py-2 focus:outline-none focus:ring-2 focus:ring-[var(--color-cyan-400)]/40 appearance-none cursor-pointer`;
 
   return (
     <>
@@ -151,7 +152,7 @@ function AddonBrowser({
               value={query}
               onChange={(e) => setQuery(e.target.value)}
               placeholder={`Search ${kindLabel.toLowerCase()}…`}
-              className={`w-full rounded-lg bg-white dark:bg-[#0f1723]/60 border ${borderColor} ${textPrimary} text-sm pl-9 pr-3 py-2 focus:outline-none focus:ring-2 focus:ring-[var(--color-cyan-400)]/40`}
+              className={`w-full rounded-lg bg-white dark:bg-[#15221d]/60 border ${borderColor} ${textPrimary} text-sm pl-9 pr-3 py-2 focus:outline-none focus:ring-2 focus:ring-[var(--color-cyan-400)]/40`}
             />
           </div>
           <div className="relative">

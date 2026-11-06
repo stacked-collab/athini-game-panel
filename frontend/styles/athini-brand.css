@@ -1,48 +1,209 @@
-/* Athini branding layer. Layout and game-management behavior remain upstream. */
-:root, html:not(.dark) {
-  --athini-green: #1e7f4f;
-  --athini-sidebar: #254c39;
-  --athini-sidebar-dark: #12201b;
-  --gp-primary-100: #daf3e6;
-  --gp-primary-200: #b5e8cd;
-  --gp-primary-300: #77dba7;
-  --gp-primary-400: #2f9c65;
-  --gp-primary-500: #1e7f4f;
-  --gp-primary-600: #196840;
-  --gp-primary-700: #254c39;
-  --gp-ods-accent-primary: var(--athini-green);
-  --gp-ods-accent-secondary: #196840;
-  --primary: var(--athini-green);
-  --accent: var(--athini-green);
-  --ring: var(--athini-green);
+/* Athini palette, matched to the hosting panel reference. See NOTICE. */
+:root {
+  --athini-green: #254c39;
+  --athini-action: #254c39;
+  --athini-action-hover: #2b5440;
+  --athini-sidebar: #15221d;
+  --athini-sidebar-dark: #15221d;
+  --athini-ink: #15221d;
+  --athini-muted: #52695b;
+  --athini-link: #254c39;
+  --athini-focus: #3c7756;
+  --athini-bg: #fafaf7;
+  --athini-surface: #ffffff;
+  --athini-raised: #f1f5f1;
+  --athini-border: #c6d7cb;
+  --athini-chart-100: #254c39;
+  --athini-chart-200: #426f56;
+  --athini-chart-300: #196840;
+  --athini-chart-400: #3c7756;
+  --athini-chart-500: #254c39;
+  --athini-chart-600: #193c29;
+  --athini-chart-700: #12201b;
+  --athini-chart-in: #196840;
+  --athini-chart-out: #9a6a16;
+  --athini-tooltip-bg: #15221df5;
+  --athini-tooltip-border: #3c6250;
+  --athini-tooltip-text: #dce5df;
+
+  --gp-primary-100: #e4efe6;
+  --gp-primary-200: #b5d8c1;
+  --gp-primary-300: #d9e7dc;
+  --gp-primary-400: var(--athini-action-hover);
+  --gp-primary-500: var(--athini-action);
+  --gp-primary-600: var(--athini-action-hover);
+  --gp-primary-700: var(--athini-action);
+  --gp-ods-accent-primary: var(--athini-action);
+  --gp-ods-accent-secondary: var(--athini-action-hover);
+  --color-cyan-400: var(--athini-link);
+  --color-cyan-600: var(--athini-link);
+  --color-cyan-900: #15221d;
+  --primary: var(--athini-action);
+  --primary-foreground: #ffffff;
+  --accent: var(--athini-action);
+  --accent-foreground: #ffffff;
+  --ring: var(--athini-focus);
+  --secondary: #e4efe6;
+  --secondary-foreground: #193c29;
+  --background: var(--athini-bg);
+  --foreground: var(--athini-ink);
+  --card: var(--athini-surface);
+  --card-foreground: var(--athini-ink);
+  --popover: var(--athini-surface);
+  --popover-foreground: var(--athini-ink);
+  --muted: var(--athini-raised);
+  --muted-foreground: var(--athini-muted);
+  --border: var(--athini-border);
+  --input-background: var(--athini-surface);
+  --ods-theme-outline-color: var(--athini-focus);
+  --sidebar: var(--athini-sidebar);
+  --sidebar-primary: var(--athini-action);
+  --sidebar-accent: var(--athini-action);
+  --sidebar-ring: var(--athini-focus);
+  --gp-global-gradient: radial-gradient(ellipse at top left, #b5d8c133 0%, transparent 58%), var(--athini-bg);
+  --chart-1: var(--athini-chart-100);
+  --chart-2: var(--athini-chart-in);
+  --chart-3: #5b9772;
+  --chart-4: var(--athini-chart-out);
+  --chart-5: #8a699e;
 }
-html:not(.dark) { --color-cyan-400: var(--athini-green); }
+.dark {
+  --athini-ink: #dce5df;
+  --athini-muted: #a7b6ad;
+  --athini-link: #77dba7;
+  --athini-focus: #77dba7;
+  --athini-bg: #0e1815;
+  --athini-surface: #15221d;
+  --athini-raised: #172320;
+  --athini-border: #30473b;
+  --athini-chart-100: #77dba7;
+  --athini-chart-200: #a0e8bf;
+  --athini-chart-300: #77dba7;
+  --athini-chart-400: #b5d8c1;
+  --athini-chart-500: #6bbb91;
+  --athini-chart-600: #54a77b;
+  --athini-chart-700: #426f56;
+  --athini-chart-in: #77dba7;
+  --athini-chart-out: #dfbf76;
+  --gp-primary-100: #b5e8cd;
+  --gp-primary-200: #a0e8bf;
+  --gp-primary-300: #77dba7;
+  --gp-global-gradient: radial-gradient(ellipse at top left, #24533a2e 0%, transparent 58%), var(--athini-bg);
+  --gp-text-white: #dce5df;
+  --gp-text-gray-100: #dce5df;
+  --gp-text-gray-200: #c4d3c9;
+  --gp-text-gray-300: #b8cbbd;
+  --gp-text-gray-400: #a7b6ad;
+  --gp-text-gray-500: #91a399;
+  --gp-text-slate-200: #c4d3c9;
+  --gp-text-slate-300: #b8cbbd;
+  --gp-text-slate-400: #a7b6ad;
+}
+/* Tailwind colour names remain API-compatible while interface blues use Athini greens. */
+:root {
+  --color-gray-50: #fafcf8;
+  --color-gray-100: #f1f5f1;
+  --color-gray-200: #dce5df;
+  --color-gray-300: #c4d3c9;
+  --color-gray-400: #a7b6ad;
+  --color-gray-500: #91a399;
+  --color-gray-600: #72877a;
+  --color-gray-700: #52695b;
+  --color-gray-800: #30473b;
+  --color-gray-900: #172320;
+  --color-gray-950: #0e1815;
+}
+:root {
+  --color-slate-50: #fafcf8;
+  --color-slate-100: #f1f5f1;
+  --color-slate-200: #dce5df;
+  --color-slate-300: #c4d3c9;
+  --color-slate-400: #a7b6ad;
+  --color-slate-500: #91a399;
+  --color-slate-600: #72877a;
+  --color-slate-700: #52695b;
+  --color-slate-800: #30473b;
+  --color-slate-900: #172320;
+  --color-slate-950: #0e1815;
+}
+:root {
+  --color-blue-50: #f1f7f1;
+  --color-blue-100: #e4efe6;
+  --color-blue-200: #c7e2d0;
+  --color-blue-300: #a0d3b3;
+  --color-blue-400: #77bd92;
+  --color-blue-500: #426f56;
+  --color-blue-600: #254c39;
+  --color-blue-700: #193c29;
+  --color-blue-800: #193328;
+  --color-blue-900: #15221d;
+  --color-blue-950: #0e1815;
+}
+:root {
+  --color-sky-50: #f1f7f1;
+  --color-sky-100: #e4efe6;
+  --color-sky-200: #c7e2d0;
+  --color-sky-300: #a0d3b3;
+  --color-sky-400: #77bd92;
+  --color-sky-500: #426f56;
+  --color-sky-600: #254c39;
+  --color-sky-700: #193c29;
+  --color-sky-800: #193328;
+  --color-sky-900: #15221d;
+  --color-sky-950: #0e1815;
+}
+:root {
+  --color-indigo-50: #f1f7f1;
+  --color-indigo-100: #e4efe6;
+  --color-indigo-200: #c7e2d0;
+  --color-indigo-300: #a0d3b3;
+  --color-indigo-400: #77bd92;
+  --color-indigo-500: #426f56;
+  --color-indigo-600: #254c39;
+  --color-indigo-700: #193c29;
+  --color-indigo-800: #193328;
+  --color-indigo-900: #15221d;
+  --color-indigo-950: #0e1815;
+}
+
 .athini-brand { display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-width: 0; color: #fff; text-align: left; }
 .athini-brand > img { width: 40px; height: 40px; flex: 0 0 auto; object-fit: contain; }
 .athini-brand > span { display: grid; gap: 2px; min-width: 0; }
 .athini-brand strong { color: #fff; font-size: 21px; font-weight: 700; line-height: 1.1; letter-spacing: -.03em; }
-.athini-brand small { color: #ffffffc7; font-size: 11px; line-height: 1.2; letter-spacing: .04em; }
+.athini-brand small { color: #a7b6ad; font-size: 11px; line-height: 1.2; letter-spacing: .04em; }
 .athini-brand--compact > img { width: 32px; height: 32px; }
 .athini-brand--compact strong { font-size: 18px; }
 .athini-brand--compact small { font-size: 10px; }
 .athini-brand--login > img { width: 60px; height: 60px; }
 .athini-brand--login strong { font-size: 32px; }
 .athini-brand--login small { font-size: 14px; }
-.athini-sidebar, html:not(.dark) .athini-sidebar, .athini-mobile-header {
-  background: var(--athini-sidebar) !important; border-color: #ffffff20 !important; color: #fff;
+.athini-sidebar, html:not(.dark) .athini-sidebar, .dark .athini-sidebar, .athini-mobile-header, .dark .athini-mobile-header {
+  background: #15221d !important; border-color: #b2d1bd14 !important; color: #dce5df;
 }
-.dark .athini-sidebar, .dark .athini-mobile-header { background: var(--athini-sidebar-dark) !important; }
-.athini-sidebar__brand { border-color: #ffffff20; display: flex; justify-content: center; }
+.athini-sidebar__brand { border-color: #b2d1bd14; display: flex; justify-content: center; }
 .athini-sidebar .gp-app-button.athini-sidebar__item {
-  background: transparent !important; color: #ffffffd9 !important; border-color: transparent !important;
+  background: transparent !important; color: #a7b6ad !important; border-color: transparent !important;
 }
-.athini-sidebar .gp-app-button.athini-sidebar__item:hover:not(:disabled) { background: #ffffff14 !important; color: #fff !important; }
+.athini-sidebar .gp-app-button.athini-sidebar__item:hover:not(:disabled) { background: #254c394d !important; color: #dce5df !important; }
 .athini-sidebar .gp-app-button.athini-sidebar__item--active, .athini-sidebar .gp-app-button.athini-sidebar__item--active:hover:not(:disabled) {
-  background: #f2f7f3 !important; color: #193c29 !important; border-color: #f2f7f3 !important;
+  --gp-text-white: #ffffff; background: #254c39 !important; color: #fff !important; border-color: transparent !important;
 }
-.athini-sidebar .gp-app-button.athini-sidebar__item:disabled { color: #ffffff66 !important; cursor: not-allowed; opacity: 1; }
-.athini-sidebar .gp-app-button:focus-visible, .athini-sidebar__footer :is(a, button):focus-visible { outline: 2px solid #b5e8cd; outline-offset: 3px; }
-.athini-sidebar .gp-user-avatar { background: #172e22 !important; border-color: #ffffff35 !important; color: #fff !important; }
-.athini-sidebar__footer { color: #ffffffc7; }
+.athini-sidebar .gp-app-button.athini-sidebar__item:disabled { color: #91a39980 !important; cursor: not-allowed; opacity: 1; }
+.athini-sidebar .gp-app-button:focus-visible, .athini-sidebar__footer :is(a, button):focus-visible { outline: 2px solid #77dba7; outline-offset: 3px; }
+.athini-sidebar .gp-user-avatar { background: #254c394d !important; border-color: #b2d1bd26 !important; color: #dce5df !important; }
+.athini-sidebar__footer { color: #a7b6ad; border-color: #b2d1bd14 !important; }
 .athini-sidebar__footer :is(a, button) { color: inherit; cursor: pointer; }
 .athini-sidebar__footer :is(a, button):hover { color: #fff; text-decoration: underline; }
+html :is(.gp-app-button--primary, .gp-app-button--secondary)[data-ods='button']:not([disabled]) {
+  --gp-text-white: #ffffff; --gp-text-gray-100: #ffffff;
+  background: #254c39 !important; border-color: #3c6250 !important; color: #fff !important;
+}
+html :is(.gp-app-button--primary, .gp-app-button--secondary)[data-ods='button']:not([disabled]):hover {
+  background: #2b5440 !important; border-color: #668b75 !important; color: #fff !important;
+}
+html .gp-app-button--critical[data-ods='button'] { --gp-text-white: #ffffff; }
+html :is(input, textarea, select, .gp-app-button):focus-visible { outline-color: var(--athini-focus); }
+html :is(input[type='checkbox'], input[type='radio']) { accent-color: #254c39; }
+.gp-markdown a { color: var(--athini-link); }
+.dark .cm-editor, .dark .cm-gutters, .dark .cm-panels { background-color: #15221d; border-color: #30473b; }
+.dark .cm-activeLine, .dark .cm-activeLineGutter { background-color: #254c3933; }

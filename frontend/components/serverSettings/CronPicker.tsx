@@ -1,3 +1,4 @@
+// Athini palette customization; see NOTICE.
 import { useState } from 'react';
 
 type FreqType = 'minutes' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'custom';
@@ -185,8 +186,8 @@ export function CronPicker({ value, onChange, borderColor, textPrimary, textSeco
     }
   };
 
-  const selectCls = `rounded-lg bg-white dark:bg-[#0f1723]/60 border ${inputBorder} ${textPrimary} text-sm px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[var(--gp-ods-accent-primary)] transition-all`;
-  const timeCls   = `rounded-lg bg-white dark:bg-[#0f1723]/60 border ${inputBorder} ${textPrimary} text-sm px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[var(--gp-ods-accent-primary)] transition-all`;
+  const selectCls = `rounded-lg bg-white dark:bg-[#15221d]/60 border ${inputBorder} ${textPrimary} text-sm px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[var(--gp-ods-accent-primary)] transition-all`;
+  const timeCls   = `rounded-lg bg-white dark:bg-[#15221d]/60 border ${inputBorder} ${textPrimary} text-sm px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[var(--gp-ods-accent-primary)] transition-all`;
 
   const description = describeState(state);
 
@@ -326,7 +327,7 @@ export function CronPicker({ value, onChange, borderColor, textPrimary, textSeco
               value={state.customCron}
               onChange={(e) => update({ customCron: e.target.value })}
               placeholder="0 5 * * *"
-              className={`w-full font-mono rounded-lg bg-white dark:bg-[#0f1723]/60 border ${inputBorder} ${textPrimary} text-sm px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[var(--gp-ods-accent-primary)] transition-all`}
+              className={`w-full font-mono rounded-lg bg-white dark:bg-[#15221d]/60 border ${inputBorder} ${textPrimary} text-sm px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[var(--gp-ods-accent-primary)] transition-all`}
             />
             <p className={`mt-1 text-xs ${textSecondary}`}>Format: min hour day month weekday</p>
           </div>

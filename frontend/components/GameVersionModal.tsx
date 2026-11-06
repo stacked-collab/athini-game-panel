@@ -1,3 +1,4 @@
+// Athini palette customization; see NOTICE.
 import { ArrowRight, X } from 'lucide-react';
 import { AppButton } from '../src/ui/components';
 import type { OvhcloudImage } from '../utils/ovhcloudCatalog';
@@ -34,7 +35,7 @@ export function GameVersionModal({ images, onSelect, onClose }: GameVersionModal
 
   return (
     <div className="fixed inset-0 z-[80] flex items-center justify-center bg-black/70 backdrop-blur-sm p-4">
-      <div className="bg-white dark:bg-gradient-to-br dark:from-[#1f2937] dark:to-[#111827] border border-gray-200 dark:border-gray-700/50 rounded-2xl shadow-2xl w-full max-w-lg max-h-[90vh] overflow-y-auto">
+      <div className="bg-white dark:bg-gradient-to-br dark:from-[#172b22] dark:to-[#15221d] border border-gray-200 dark:border-gray-700/50 rounded-2xl shadow-2xl w-full max-w-lg max-h-[90vh] overflow-y-auto">
         <div className="flex items-start justify-between px-6 py-5 border-b border-gray-200 dark:border-gray-700/50">
           <div>
             <h3 className="text-xl font-bold text-gray-900 dark:text-white">Minecraft</h3>

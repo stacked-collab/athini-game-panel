@@ -1,9 +1,9 @@
-import { getAppVersion } from './appInfo.js';
+import { getGamePanelImageVersion } from './appInfo.js';
 
 const GAMEPANEL_IMAGE_REGISTRY = 'ovhcom';
 
 export function gamePanelImageTag(): string {
-    return getAppVersion().replace(/^v/, '');
+    return getGamePanelImageVersion().replace(/^v/, '');
 }
 
 export function gamePanelImage(name: string): string {

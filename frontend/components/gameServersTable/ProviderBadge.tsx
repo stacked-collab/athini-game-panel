@@ -30,8 +30,8 @@ export function ProviderLogo({ provider, height = 22 }: { provider?: string; hei
       <span style={{
         fontSize: Math.round(height * 0.55),
         fontWeight: 600,
-        color: isDark ? '#9ca3af' : '#6b7280',
-        border: `1px solid ${isDark ? '#6b7280' : '#9ca3af'}`,
+        color: isDark ? '#91a399' : '#72877a',
+        border: `1px solid ${isDark ? '#72877a' : '#91a399'}`,
         borderRadius: 4,
         padding: '1px 5px',
         letterSpacing: '0.04em',
@@ -85,8 +85,8 @@ export function ProviderBadge({ provider }: ProviderBadgeProps) {
         <span style={{
           fontSize: 9,
           fontWeight: 700,
-          color: isDark ? '#9ca3af' : '#6b7280',
-          border: `1px solid ${isDark ? '#6b7280' : '#9ca3af'}`,
+          color: isDark ? '#91a399' : '#72877a',
+          border: `1px solid ${isDark ? '#72877a' : '#91a399'}`,
           borderRadius: 3,
           padding: '1px 4px',
           letterSpacing: '0.06em',

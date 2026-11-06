@@ -1,3 +1,4 @@
+// Athini palette customization; see NOTICE.
 import { Terminal, Trash2, X, Copy, ArrowDown, CornerDownLeft, Maximize2, Minimize2 } from 'lucide-react';
 import { memo, useState, useRef, useEffect, useLayoutEffect, useMemo, Fragment } from 'react';
 import { AppButton, AppToggle } from '../src/ui/components';
@@ -357,7 +358,7 @@ export function ServerConsoleTabs({
     }
   };
 
-  const cardBg = 'bg-gp-surface-card shadow-[0_4px_24px_rgba(2,6,23,0.55),0_1px_4px_rgba(2,6,23,0.3)]';
+  const cardBg = 'bg-gp-surface-card shadow-[0_4px_24px_rgba(12, 20, 16,0.55),0_1px_4px_rgba(12, 20, 16,0.3)]';
   const borderColor = 'border-gray-700';
   const textSecondary = 'text-gray-400';
 
@@ -375,7 +376,7 @@ export function ServerConsoleTabs({
   };
   const tabBg = 'bg-gp-surface-elevated';
   const tabActiveBg = 'border-[var(--gp-primary-300)] bg-[var(--gp-primary-300)]';
-  const tabActiveText = 'text-[#031126]';
+  const tabActiveText = 'text-[#10251a]';
   const tabHoverBg = 'hover:bg-gray-700';
   const terminalBg = 'bg-black';
 
@@ -580,7 +581,7 @@ export function ServerConsoleTabs({
               <span
                 className={`ml-2 rounded-full px-2 py-0.5 text-xs font-bold ${
                   activeTab === 'cli-console'
-                    ? 'bg-[#031126]/15 text-[#031126]'
+                    ? 'bg-[#10251a]/15 text-[#10251a]'
                     : 'bg-[var(--gp-ods-accent-secondary)] text-white'
                 }`}
               >
@@ -615,7 +616,7 @@ export function ServerConsoleTabs({
                     aria-label={`Close ${server.name} tab`}
                     className={`ml-2 inline-flex h-7 w-7 items-center justify-center rounded-md transition-all ${
                       isActiveServerTab
-                        ? 'bg-transparent text-[#031126] opacity-60 hover:opacity-100 hover:bg-[#031126]/10'
+                        ? 'bg-transparent text-[#10251a] opacity-60 hover:opacity-100 hover:bg-[#10251a]/10'
                         : 'bg-transparent opacity-0 text-slate-400 group-hover:opacity-100 hover:bg-red-500/10 hover:text-red-400'
                     }`}
                   >
@@ -732,7 +733,7 @@ export function ServerConsoleTabs({
                     tone="ghost"
                     onClick={scrollCliToBottom}
                     aria-label="Scroll to latest logs"
-                    className="absolute bottom-4 right-4 inline-flex items-center gap-2 rounded-lg border border-[var(--color-cyan-400)]/60 bg-[var(--gp-console-scroll-bg,#0b2f35)]/95 px-3 py-2 text-sm font-semibold text-[var(--color-cyan-400)] shadow-lg transition-colors hover:bg-[var(--gp-console-scroll-hover,#104049)]"
+                    className="absolute bottom-4 right-4 inline-flex items-center gap-2 rounded-lg border border-[var(--color-cyan-400)]/60 bg-[var(--gp-console-scroll-bg,#193c29)]/95 px-3 py-2 text-sm font-semibold text-[var(--color-cyan-400)] shadow-lg transition-colors hover:bg-[var(--gp-console-scroll-hover,#254c39)]"
                   >
                     <ArrowDown className="h-4 w-4" />
                     {pendingCliLogs > 0 ? `${pendingCliLogs} new log${pendingCliLogs > 1 ? 's' : ''}` : 'Jump to bottom'}
@@ -780,7 +781,7 @@ export function ServerConsoleTabs({
                     tone="ghost"
                     onClick={scrollServerToBottom}
                     aria-label="Scroll to latest logs"
-                    className="absolute bottom-4 right-4 inline-flex items-center gap-2 rounded-lg border border-[var(--color-cyan-400)]/60 bg-[var(--gp-console-scroll-bg,#0b2f35)]/95 px-3 py-2 text-sm font-semibold text-[var(--color-cyan-400)] shadow-lg transition-colors hover:bg-[var(--gp-console-scroll-hover,#104049)]"
+                    className="absolute bottom-4 right-4 inline-flex items-center gap-2 rounded-lg border border-[var(--color-cyan-400)]/60 bg-[var(--gp-console-scroll-bg,#193c29)]/95 px-3 py-2 text-sm font-semibold text-[var(--color-cyan-400)] shadow-lg transition-colors hover:bg-[var(--gp-console-scroll-hover,#254c39)]"
                   >
                     <ArrowDown className="h-4 w-4" />
                     {pendingServerLogs > 0 ? `${pendingServerLogs} new log${pendingServerLogs > 1 ? 's' : ''}` : 'Jump to bottom'}
@@ -804,7 +805,7 @@ export function ServerConsoleTabs({
                       ? 'Type a command and press Enter…'
                       : 'No permission to send commands';
                 return (
-                  <div className={`shrink-0 flex items-center gap-2 border-t ${borderColor} bg-[#0d1117] px-4 py-2.5`}>
+                  <div className={`shrink-0 flex items-center gap-2 border-t ${borderColor} bg-[#0e1815] px-4 py-2.5`}>
                     <span className="shrink-0 select-none font-mono text-sm font-bold text-[var(--color-cyan-400)]">
                       {commandSending ? '…' : '>'}
                     </span>
@@ -819,7 +820,7 @@ export function ServerConsoleTabs({
                       onKeyDown={handleCommandKeyDown}
                       disabled={isInputDisabled}
                       placeholder={inputPlaceholder}
-                      style={{ color: isInputDisabled ? '#4b5563' : '#e2e8f0' }}
+                      style={{ color: isInputDisabled ? '#52695b' : '#dce5df' }}
                       className="flex-1 bg-transparent font-mono text-sm caret-[var(--color-cyan-400)] placeholder-gray-600 focus:outline-none disabled:cursor-not-allowed"
                     />
                     <button

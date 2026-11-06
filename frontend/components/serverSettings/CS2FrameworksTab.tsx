@@ -1,3 +1,4 @@
+// Athini palette customization; see NOTICE.
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { AlertTriangle, Check, ChevronDown, ChevronRight, Loader2, Terminal } from 'lucide-react';
 import { AppButton } from '../../src/ui/components';
@@ -35,10 +36,10 @@ export interface CS2FrameworksSectionProps {
 type VersionLoadStatus = 'loading' | 'loaded' | 'failed';
 
 const selectCls =
-  'w-full rounded-lg bg-white dark:bg-[#0f1723]/60 border border-gray-300 dark:border-gray-700/50 text-gray-900 dark:text-white text-sm px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[var(--gp-ods-accent-primary)] dark:focus:ring-white/20 focus:border-transparent disabled:opacity-50 transition-all appearance-none cursor-pointer';
+  'w-full rounded-lg bg-white dark:bg-[#15221d]/60 border border-gray-300 dark:border-gray-700/50 text-gray-900 dark:text-white text-sm px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[var(--gp-ods-accent-primary)] dark:focus:ring-white/20 focus:border-transparent disabled:opacity-50 transition-all appearance-none cursor-pointer';
 
 const versionInputCls =
-  'w-full rounded-lg bg-white dark:bg-[#0f1723]/60 border border-gray-300 dark:border-gray-700/50 text-gray-900 dark:text-white text-sm px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[var(--gp-ods-accent-primary)] dark:focus:ring-white/20 focus:border-transparent disabled:opacity-50 transition-all';
+  'w-full rounded-lg bg-white dark:bg-[#15221d]/60 border border-gray-300 dark:border-gray-700/50 text-gray-900 dark:text-white text-sm px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[var(--gp-ods-accent-primary)] dark:focus:ring-white/20 focus:border-transparent disabled:opacity-50 transition-all';
 
 function VersionSelect({
   status,

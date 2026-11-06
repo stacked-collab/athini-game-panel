@@ -1,3 +1,4 @@
+// Athini palette customization; see NOTICE.
 import { useState, type Dispatch, type SetStateAction } from 'react';
 import { AlertCircle, Eye, EyeOff, Save } from 'lucide-react';
 import { X } from 'lucide-react';
@@ -136,7 +137,7 @@ export function UserEditDialog({
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent dismissible={false} className="w-[94vw] sm:w-[86vw] lg:w-[68vw] xl:w-[62vw] max-h-[90vh] sm:max-w-[920px] xl:max-w-[980px] overflow-hidden border border-gray-700/80 bg-[#0f172a] p-0 text-white">
+      <DialogContent dismissible={false} className="w-[94vw] sm:w-[86vw] lg:w-[68vw] xl:w-[62vw] max-h-[90vh] sm:max-w-[920px] xl:max-w-[980px] overflow-hidden border border-gray-700/80 bg-[#15221d] p-0 text-white">
         <div className="flex justify-end border-b border-gray-800 px-4 py-2">
           <button
             type="button"
@@ -160,10 +161,10 @@ export function UserEditDialog({
             ) : (
               <div className="space-y-5 pt-0">
                 <div className="grid grid-cols-1 gap-4 lg:grid-cols-[2fr_1fr]">
-                  <section className="rounded-lg border border-gray-700 bg-[#1f2937] p-4">
+                  <section className="rounded-lg border border-gray-700 bg-[#172b22] p-4">
                     <h3 className="text-lg font-semibold text-white">User configuration</h3>
                     <div className="mt-3 space-y-4">
-                      <div className="inline-flex items-center gap-3 rounded-lg border border-gray-700 bg-[#111827] px-3 py-2 text-sm text-gray-200">
+                      <div className="inline-flex items-center gap-3 rounded-lg border border-gray-700 bg-[#15221d] px-3 py-2 text-sm text-gray-200">
                         <AppToggle
                           ariaLabel="Account enabled"
                           checked={enabled}
@@ -181,7 +182,7 @@ export function UserEditDialog({
                           value={username}
                           onChange={(event) => setUsername(event.target.value)}
                           placeholder="Username"
-                          className="prevent-autofill w-full rounded border border-gray-700 bg-[#0f172a] px-3 py-2 text-sm text-white"
+                          className="prevent-autofill w-full rounded border border-gray-700 bg-[#15221d] px-3 py-2 text-sm text-white"
                         />
                       </label>
 
@@ -200,7 +201,7 @@ export function UserEditDialog({
                               value={newPassword}
                               onChange={(event) => setNewPassword(event.target.value)}
                               placeholder="New password"
-                              className="prevent-autofill w-full rounded border border-gray-700 bg-[#0f172a] px-3 py-2 pr-10 text-sm text-white"
+                              className="prevent-autofill w-full rounded border border-gray-700 bg-[#15221d] px-3 py-2 pr-10 text-sm text-white"
                             />
                             <button type="button" tabIndex={-1} onClick={() => setShowPassword(s => !s)}
                               className="absolute right-2.5 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-200 transition-colors">
@@ -222,7 +223,7 @@ export function UserEditDialog({
                               value={newPasswordConfirm}
                               onChange={(event) => setNewPasswordConfirm(event.target.value)}
                               placeholder="Retype password"
-                              className="prevent-autofill w-full rounded border border-gray-700 bg-[#0f172a] px-3 py-2 pr-10 text-sm text-white"
+                              className="prevent-autofill w-full rounded border border-gray-700 bg-[#15221d] px-3 py-2 pr-10 text-sm text-white"
                             />
                             <button type="button" tabIndex={-1} onClick={() => setShowPasswordConfirm(s => !s)}
                               className="absolute right-2.5 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-200 transition-colors">
@@ -234,7 +235,7 @@ export function UserEditDialog({
                     </div>
                   </section>
 
-                  <section className="rounded-lg border border-gray-700 bg-[#1f2937] p-4">
+                  <section className="rounded-lg border border-gray-700 bg-[#172b22] p-4">
                     <h3 className="text-lg font-semibold text-white">Global Permissions</h3>
                     <div className="mt-3 space-y-2">
                       {GLOBAL_OPTIONS.filter((opt) => opt.value !== '*').map((opt) => {
@@ -252,8 +253,8 @@ export function UserEditDialog({
                             label={opt.label}
                             className={`w-full flex-row-reverse justify-between rounded border px-3 py-2 transition-colors ${
                               checked
-                                ? 'border-[var(--color-cyan-400)]/50 bg-[#0050D7]/10'
-                                : 'border-gray-700 bg-[#111827]'
+                                ? 'border-[var(--color-cyan-400)]/50 bg-[#254c39]/10'
+                                : 'border-gray-700 bg-[#15221d]'
                             }`}
                           />
                         );
@@ -262,7 +263,7 @@ export function UserEditDialog({
                   </section>
                 </div>
 
-                <section className="rounded-lg border border-gray-700 bg-[#1f2937] p-4">
+                <section className="rounded-lg border border-gray-700 bg-[#172b22] p-4">
                   <h3 className="text-lg font-semibold text-white">Server access for this user</h3>
                   <p className="mt-1 text-sm text-gray-400">
                     Configure one server at a time with clear access status and actions
@@ -286,18 +287,18 @@ export function UserEditDialog({
                           label: server.name,
                           value: server.id,
                         }))}
-                        className="w-full rounded-lg border border-gray-700 bg-[#0b1220] px-3 py-2 text-sm text-white"
+                        className="w-full rounded-lg border border-gray-700 bg-[#0e1815] px-3 py-2 text-sm text-white"
                       />
                     </div>
 
-                    <div className="rounded-lg border border-gray-700/70 bg-[#111827] px-3 py-2">
+                    <div className="rounded-lg border border-gray-700/70 bg-[#15221d] px-3 py-2">
                       <div className="flex items-center justify-between gap-2">
                         <span className="text-xs text-gray-400">Current access</span>
                         <span
                           className={`rounded-full border px-2 py-0.5 text-xs ${
                             selectedAccessUser
-                              ? 'border-[var(--color-cyan-400)]/40 bg-[#0050D7]/10 text-[var(--color-cyan-400)]'
-                              : 'border-gray-600 bg-[#0f172a] text-gray-300'
+                              ? 'border-[var(--color-cyan-400)]/40 bg-[#254c39]/10 text-[var(--color-cyan-400)]'
+                              : 'border-gray-600 bg-[#15221d] text-gray-300'
                           }`}
                         >
                           {selectedAccessUser
@@ -341,9 +342,9 @@ export function UserEditDialog({
                           !presetChips.some((preset) => samePermissionSet(addMemberPerms, preset.permissions));
                         const chipBase = 'rounded-full border px-3 py-1.5 text-xs transition-colors';
                         const activeChip =
-                          'gp-preset-active border-[var(--color-cyan-400)] bg-[#0050D7]/20 text-[var(--color-cyan-400)] ring-2 ring-[var(--color-cyan-400)]';
+                          'gp-preset-active border-[var(--color-cyan-400)] bg-[#254c39]/20 text-[var(--color-cyan-400)] ring-2 ring-[var(--color-cyan-400)]';
                         const idleChip =
-                          'border-gray-600 bg-[#111827] text-gray-300 hover:border-[var(--color-cyan-400)] hover:text-[var(--color-cyan-400)]';
+                          'border-gray-600 bg-[#15221d] text-gray-300 hover:border-[var(--color-cyan-400)] hover:text-[var(--color-cyan-400)]';
                         return (
                           <div className="mt-2 flex flex-wrap gap-2">
                             <AppButton
@@ -405,8 +406,8 @@ export function UserEditDialog({
                                 label={opt.label}
                                 className={`w-full flex-row-reverse justify-between rounded border px-3 py-2 transition-colors ${
                                   checked
-                                    ? 'border-[var(--color-cyan-400)]/50 bg-[#0050D7]/10'
-                                    : 'border-gray-700 bg-[#111827]'
+                                    ? 'border-[var(--color-cyan-400)]/50 bg-[#254c39]/10'
+                                    : 'border-gray-700 bg-[#15221d]'
                                 }`}
                               />
                             );
@@ -435,8 +436,8 @@ export function UserEditDialog({
                                 label={opt.label}
                                 className={`w-full flex-row-reverse justify-between rounded border px-3 py-2 transition-colors ${
                                   checked
-                                    ? 'border-[var(--color-cyan-400)]/50 bg-[#0050D7]/10'
-                                    : 'border-gray-700 bg-[#111827]'
+                                    ? 'border-[var(--color-cyan-400)]/50 bg-[#254c39]/10'
+                                    : 'border-gray-700 bg-[#15221d]'
                                 }`}
                               />
                             );
@@ -465,8 +466,8 @@ export function UserEditDialog({
                                 label={opt.label}
                                 className={`w-full flex-row-reverse justify-between rounded border px-3 py-2 transition-colors ${
                                   checked
-                                    ? 'border-[var(--color-cyan-400)]/50 bg-[#0050D7]/10'
-                                    : 'border-gray-700 bg-[#111827]'
+                                    ? 'border-[var(--color-cyan-400)]/50 bg-[#254c39]/10'
+                                    : 'border-gray-700 bg-[#15221d]'
                                 }`}
                               />
                             );
@@ -497,8 +498,8 @@ export function UserEditDialog({
                                 label={opt.label}
                                 className={`w-full flex-row-reverse justify-between rounded border px-3 py-2 transition-colors ${
                                   checked
-                                    ? 'border-[var(--color-cyan-400)]/50 bg-[#0050D7]/10'
-                                    : 'border-gray-700 bg-[#111827]'
+                                    ? 'border-[var(--color-cyan-400)]/50 bg-[#254c39]/10'
+                                    : 'border-gray-700 bg-[#15221d]'
                                 }`}
                               />
                             );
@@ -527,8 +528,8 @@ export function UserEditDialog({
                                 label={opt.label}
                                 className={`w-full flex-row-reverse justify-between rounded border px-3 py-2 transition-colors ${
                                   checked
-                                    ? 'border-[var(--color-cyan-400)]/50 bg-[#0050D7]/10'
-                                    : 'border-gray-700 bg-[#111827]'
+                                    ? 'border-[var(--color-cyan-400)]/50 bg-[#254c39]/10'
+                                    : 'border-gray-700 bg-[#15221d]'
                                 }`}
                               />
                             );
@@ -557,8 +558,8 @@ export function UserEditDialog({
                                 label={opt.label}
                                 className={`w-full flex-row-reverse justify-between rounded border px-3 py-2 transition-colors ${
                                   checked
-                                    ? 'border-[var(--color-cyan-400)]/50 bg-[#0050D7]/10'
-                                    : 'border-gray-700 bg-[#111827]'
+                                    ? 'border-[var(--color-cyan-400)]/50 bg-[#254c39]/10'
+                                    : 'border-gray-700 bg-[#15221d]'
                                 }`}
                               />
                             );
@@ -587,8 +588,8 @@ export function UserEditDialog({
                                 label={opt.label}
                                 className={`w-full flex-row-reverse justify-between rounded border px-3 py-2 transition-colors ${
                                   checked
-                                    ? 'border-[var(--color-cyan-400)]/50 bg-[#0050D7]/10'
-                                    : 'border-gray-700 bg-[#111827]'
+                                    ? 'border-[var(--color-cyan-400)]/50 bg-[#254c39]/10'
+                                    : 'border-gray-700 bg-[#15221d]'
                                 }`}
                               />
                             );
@@ -617,8 +618,8 @@ export function UserEditDialog({
                                 label={opt.label}
                                 className={`w-full flex-row-reverse justify-between rounded border px-3 py-2 transition-colors ${
                                   checked
-                                    ? 'border-[var(--color-cyan-400)]/50 bg-[#0050D7]/10'
-                                    : 'border-gray-700 bg-[#111827]'
+                                    ? 'border-[var(--color-cyan-400)]/50 bg-[#254c39]/10'
+                                    : 'border-gray-700 bg-[#15221d]'
                                 }`}
                               />
                             );
@@ -647,8 +648,8 @@ export function UserEditDialog({
                                 label={opt.label}
                                 className={`w-full flex-row-reverse justify-between rounded border px-3 py-2 transition-colors ${
                                   checked
-                                    ? 'border-[var(--color-cyan-400)]/50 bg-[#0050D7]/10'
-                                    : 'border-gray-700 bg-[#111827]'
+                                    ? 'border-[var(--color-cyan-400)]/50 bg-[#254c39]/10'
+                                    : 'border-gray-700 bg-[#15221d]'
                                 }`}
                               />
                             );
@@ -677,8 +678,8 @@ export function UserEditDialog({
                                 label={opt.label}
                                 className={`w-full flex-row-reverse justify-between rounded border px-3 py-2 transition-colors ${
                                   checked
-                                    ? 'border-[var(--color-cyan-400)]/50 bg-[#0050D7]/10'
-                                    : 'border-gray-700 bg-[#111827]'
+                                    ? 'border-[var(--color-cyan-400)]/50 bg-[#254c39]/10'
+                                    : 'border-gray-700 bg-[#15221d]'
                                 }`}
                               />
                             );

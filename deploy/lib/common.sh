@@ -19,20 +19,8 @@ require_local_source_tree() {
     die "This script must be run from the root of a cloned game-panel repository. Missing expected directories under: $root"
 }
 
-read_package_json_version() {
-  awk -F'"' '/"version"[[:space:]]*:/ { print $4; exit }' "$1"
-}
-
-assert_app_versions_match() {
-  local source_root="$1"
-  local backend_version frontend_version
-  backend_version="$(read_package_json_version "$source_root/backend/package.json")"
-  frontend_version="$(read_package_json_version "$source_root/frontend/package.json")"
-  [[ -n "$backend_version" ]] || die "Unable to read backend version from $source_root/backend/package.json"
-  [[ -n "$frontend_version" ]] || die "Unable to read frontend version from $source_root/frontend/package.json"
-  [[ "$backend_version" == "$frontend_version" ]] || \
-    die "Version mismatch: backend=$backend_version, frontend=$frontend_version (they must be identical)."
-}
+# shellcheck source=deploy/lib/versions.sh
+. "$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)/versions.sh"
 
 require_cmd() {
   local cmd="$1"

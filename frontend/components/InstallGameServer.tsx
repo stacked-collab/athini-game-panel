@@ -1,3 +1,4 @@
+// Athini palette customization; see NOTICE.
 import React, { useEffect, useState } from 'react';
 import { useBodyScrollLock } from '../src/ui/utils/useBodyScrollLock';
 import { AlertTriangle, ArrowLeft, ArrowRight, ChevronDown, Eye, EyeOff, Package, Plus, Search, Settings2, Trash2, X } from 'lucide-react';
@@ -93,7 +94,7 @@ function envRowsToRecord(rows: EnvRow[]): Record<string, string> {
 }
 
 const inputCls =
-  'w-full rounded-lg bg-white dark:bg-[#0f1723]/60 border border-gray-300 dark:border-gray-700/50 text-gray-900 dark:text-white text-sm px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[var(--gp-ods-accent-primary)] dark:focus:ring-white/20 focus:border-transparent disabled:opacity-50 transition-all';
+  'w-full rounded-lg bg-white dark:bg-[#15221d]/60 border border-gray-300 dark:border-gray-700/50 text-gray-900 dark:text-white text-sm px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[var(--gp-ods-accent-primary)] dark:focus:ring-white/20 focus:border-transparent disabled:opacity-50 transition-all';
 
 function CollapsibleSection({
   label, badge, children, defaultOpen = false,
@@ -154,12 +155,12 @@ function PortSection({ label, rows, setRows }: { label: string; rows: PortRow[];
       {rows.map((row, i) => (
         <div key={i} className="flex gap-2 mb-2 items-center">
           <input type="number" placeholder="Host" value={row.host} onChange={(e) => update(i, 'host', e.target.value)}
-            className="w-20 rounded-lg bg-gray-50 dark:bg-[#0f1723]/60 border border-gray-300 dark:border-gray-700/50 text-gray-900 dark:text-white text-xs px-2 py-1.5 focus:outline-none focus:ring-1 focus:ring-[var(--gp-ods-accent-primary)] dark:focus:ring-white/20" />
+            className="w-20 rounded-lg bg-gray-50 dark:bg-[#15221d]/60 border border-gray-300 dark:border-gray-700/50 text-gray-900 dark:text-white text-xs px-2 py-1.5 focus:outline-none focus:ring-1 focus:ring-[var(--gp-ods-accent-primary)] dark:focus:ring-white/20" />
           <span className="text-gray-400 text-xs">→</span>
           <input type="number" placeholder="Container" value={row.container} onChange={(e) => update(i, 'container', e.target.value)}
-            className="w-20 rounded-lg bg-gray-50 dark:bg-[#0f1723]/60 border border-gray-300 dark:border-gray-700/50 text-gray-900 dark:text-white text-xs px-2 py-1.5 focus:outline-none focus:ring-1 focus:ring-[var(--gp-ods-accent-primary)] dark:focus:ring-white/20" />
+            className="w-20 rounded-lg bg-gray-50 dark:bg-[#15221d]/60 border border-gray-300 dark:border-gray-700/50 text-gray-900 dark:text-white text-xs px-2 py-1.5 focus:outline-none focus:ring-1 focus:ring-[var(--gp-ods-accent-primary)] dark:focus:ring-white/20" />
           <input type="text" placeholder="Label" value={row.label} onChange={(e) => update(i, 'label', e.target.value)}
-            className="flex-1 rounded-lg bg-gray-50 dark:bg-[#0f1723]/60 border border-gray-300 dark:border-gray-700/50 text-gray-900 dark:text-white text-xs px-2 py-1.5 focus:outline-none focus:ring-1 focus:ring-[var(--gp-ods-accent-primary)] dark:focus:ring-white/20" />
+            className="flex-1 rounded-lg bg-gray-50 dark:bg-[#15221d]/60 border border-gray-300 dark:border-gray-700/50 text-gray-900 dark:text-white text-xs px-2 py-1.5 focus:outline-none focus:ring-1 focus:ring-[var(--gp-ods-accent-primary)] dark:focus:ring-white/20" />
           <AppButton type="button" tone="ghost" onClick={() => setRows(rows.filter((_, idx) => idx !== i))}
             className="p-1 text-gray-400 hover:text-red-400 rounded">
             <Trash2 className="w-3 h-3" />
@@ -198,11 +199,11 @@ function MountSection({ rows, setRows }: { rows: MountRow[]; setRows: (r: MountR
         <div key={i} className="flex gap-2 mb-2 items-center">
           <input type="text" placeholder="volume-key" value={row.key}
             onChange={(e) => update(i, 'key', e.target.value)}
-            className="w-28 rounded-lg bg-gray-50 dark:bg-[#0f1723]/60 border border-gray-300 dark:border-gray-700/50 text-gray-900 dark:text-white text-xs px-2 py-1.5 font-mono focus:outline-none focus:ring-1 focus:ring-[var(--gp-ods-accent-primary)] dark:focus:ring-white/20" />
+            className="w-28 rounded-lg bg-gray-50 dark:bg-[#15221d]/60 border border-gray-300 dark:border-gray-700/50 text-gray-900 dark:text-white text-xs px-2 py-1.5 font-mono focus:outline-none focus:ring-1 focus:ring-[var(--gp-ods-accent-primary)] dark:focus:ring-white/20" />
           <span className="text-gray-400 text-xs">→</span>
           <input type="text" placeholder="/container/path" value={row.containerPath}
             onChange={(e) => update(i, 'containerPath', e.target.value)}
-            className="flex-1 rounded-lg bg-gray-50 dark:bg-[#0f1723]/60 border border-gray-300 dark:border-gray-700/50 text-gray-900 dark:text-white text-xs px-2 py-1.5 font-mono focus:outline-none focus:ring-1 focus:ring-[var(--gp-ods-accent-primary)] dark:focus:ring-white/20" />
+            className="flex-1 rounded-lg bg-gray-50 dark:bg-[#15221d]/60 border border-gray-300 dark:border-gray-700/50 text-gray-900 dark:text-white text-xs px-2 py-1.5 font-mono focus:outline-none focus:ring-1 focus:ring-[var(--gp-ods-accent-primary)] dark:focus:ring-white/20" />
           <AppButton type="button" tone="ghost" onClick={() => setRows(rows.filter((_, idx) => idx !== i))}
             className="p-1 text-gray-400 hover:text-red-400 rounded">
             <Trash2 className="w-3 h-3" />
@@ -250,7 +251,7 @@ function buildHC(s: HCEdit): Record<string, unknown> | null {
 
 function HealthcheckEditor({ initial, onChange }: { initial: Record<string, unknown> | null; onChange: (hc: Record<string, unknown> | null) => void }) {
   const [state, setState] = React.useState<HCEdit>(() => initHCEdit(initial));
-  const fieldCls = "w-full rounded-lg bg-gray-50 dark:bg-[#0f1723]/60 border border-gray-300 dark:border-gray-700/50 text-gray-900 dark:text-white text-xs px-2 py-1.5 focus:outline-none focus:ring-1 focus:ring-[var(--gp-ods-accent-primary)] dark:focus:ring-white/20";
+  const fieldCls = "w-full rounded-lg bg-gray-50 dark:bg-[#15221d]/60 border border-gray-300 dark:border-gray-700/50 text-gray-900 dark:text-white text-xs px-2 py-1.5 focus:outline-none focus:ring-1 focus:ring-[var(--gp-ods-accent-primary)] dark:focus:ring-white/20";
 
   const update = (patch: Partial<HCEdit>) => {
     const next = { ...state, ...patch };
@@ -528,7 +529,7 @@ function ConfigModal({
 
   return (
     <div className="fixed inset-0 z-[80] flex items-center justify-center bg-black/70 backdrop-blur-sm p-4">
-      <div className="bg-white dark:bg-gradient-to-br dark:from-[#1f2937] dark:to-[#111827] border border-gray-200 dark:border-gray-700/50 rounded-2xl shadow-2xl w-full max-w-lg overflow-hidden">
+      <div className="bg-white dark:bg-gradient-to-br dark:from-[#172b22] dark:to-[#15221d] border border-gray-200 dark:border-gray-700/50 rounded-2xl shadow-2xl w-full max-w-lg overflow-hidden">
        <div className="max-h-[90vh] overflow-y-auto">
         <div className="flex items-start justify-between px-6 py-5 border-b border-gray-200 dark:border-gray-700/50">
           <div>
@@ -825,7 +826,7 @@ function ConfigModal({
             <button
               type="button"
               onClick={() => setAdvancedOpen(v => !v)}
-              className="w-full px-4 py-3 flex items-center justify-between bg-gray-50 dark:bg-[#0f1723]/30 hover:bg-gray-100 dark:hover:bg-[#0f1723]/50 transition-colors"
+              className="w-full px-4 py-3 flex items-center justify-between bg-gray-50 dark:bg-[#15221d]/30 hover:bg-gray-100 dark:hover:bg-[#15221d]/50 transition-colors"
             >
               <span className="text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider flex items-center gap-2">
                 <Settings2 className="w-3.5 h-3.5" />
@@ -855,7 +856,7 @@ function ConfigModal({
                 )}
                 {imageRef && (
                   <CollapsibleSection label="Docker Image">
-                    <code className="block w-full rounded-lg bg-gray-100 dark:bg-[#0f1723]/40 text-gray-600 dark:text-gray-400 text-xs px-4 py-2.5 font-mono break-all select-all">
+                    <code className="block w-full rounded-lg bg-gray-100 dark:bg-[#15221d]/40 text-gray-600 dark:text-gray-400 text-xs px-4 py-2.5 font-mono break-all select-all">
                       {imageRef}
                     </code>
                   </CollapsibleSection>
@@ -885,10 +886,10 @@ function ConfigModal({
                           <div key={i} className="flex gap-2 mb-2 items-center">
                             <input type="text" placeholder="KEY" value={row.key}
                               onChange={(e) => setEnvRows(envRows.map((r, idx) => idx === i ? { ...r, key: e.target.value } : r))}
-                              className="w-36 rounded-lg bg-gray-50 dark:bg-[#0f1723]/60 border border-gray-300 dark:border-gray-700/50 text-gray-900 dark:text-white text-xs px-2 py-1.5 font-mono focus:outline-none focus:ring-1 focus:ring-[var(--gp-ods-accent-primary)] dark:focus:ring-white/20" />
+                              className="w-36 rounded-lg bg-gray-50 dark:bg-[#15221d]/60 border border-gray-300 dark:border-gray-700/50 text-gray-900 dark:text-white text-xs px-2 py-1.5 font-mono focus:outline-none focus:ring-1 focus:ring-[var(--gp-ods-accent-primary)] dark:focus:ring-white/20" />
                             <input type="text" placeholder="value" value={row.value}
                               onChange={(e) => setEnvRows(envRows.map((r, idx) => idx === i ? { ...r, value: e.target.value } : r))}
-                              className="flex-1 rounded-lg bg-gray-50 dark:bg-[#0f1723]/60 border border-gray-300 dark:border-gray-700/50 text-gray-900 dark:text-white text-xs px-2 py-1.5 font-mono focus:outline-none focus:ring-1 focus:ring-[var(--gp-ods-accent-primary)] dark:focus:ring-white/20" />
+                              className="flex-1 rounded-lg bg-gray-50 dark:bg-[#15221d]/60 border border-gray-300 dark:border-gray-700/50 text-gray-900 dark:text-white text-xs px-2 py-1.5 font-mono focus:outline-none focus:ring-1 focus:ring-[var(--gp-ods-accent-primary)] dark:focus:ring-white/20" />
                             <AppButton type="button" tone="ghost" onClick={() => setEnvRows(envRows.filter((_, idx) => idx !== i))}
                               className="p-1 text-gray-400 hover:text-red-400 rounded">
                               <Trash2 className="w-3 h-3" />
@@ -1444,7 +1445,7 @@ export function InstallGameServer({
                               {(lgsmFlags[game.shortname]?.steamCred || lgsmFlags[game.shortname]?.gameCopy) && (
                                 <div className="flex gap-1 mt-1 flex-wrap">
                                   {lgsmFlags[game.shortname]?.steamCred && (
-                                    <span className="inline-flex items-center text-[10px] font-semibold px-1.5 py-0.5 rounded-md bg-[#e8eef5] text-[#1b2838] border border-[#cdd9e5] dark:bg-[#1b2838] dark:text-[#ffffff] dark:border-[#2a475e]">
+                                    <span className="inline-flex items-center text-[10px] font-semibold px-1.5 py-0.5 rounded-md bg-[#edf3ed] text-[#20382a] border border-[#dce5df] dark:bg-[#20382a] dark:text-[#ffffff] dark:border-[#30473b]">
                                       Steam login required
                                     </span>
                                   )}
@@ -1540,11 +1541,11 @@ export function InstallGameServer({
                           <div key={i} className="flex gap-2 mb-2 items-center">
                             <input type="text" placeholder="volume-key" value={row.key}
                               onChange={(e) => setExtMountRows(extMountRows.map((r, idx) => idx === i ? { ...r, key: e.target.value } : r))}
-                              className="w-36 rounded-lg bg-white dark:bg-[#0f1723]/60 border border-gray-300 dark:border-gray-700/50 text-gray-900 dark:text-white text-xs px-2 py-2 font-mono focus:outline-none focus:ring-1 focus:ring-[var(--gp-ods-accent-primary)] dark:focus:ring-white/20" />
+                              className="w-36 rounded-lg bg-white dark:bg-[#15221d]/60 border border-gray-300 dark:border-gray-700/50 text-gray-900 dark:text-white text-xs px-2 py-2 font-mono focus:outline-none focus:ring-1 focus:ring-[var(--gp-ods-accent-primary)] dark:focus:ring-white/20" />
                             <span className="text-gray-400 text-xs">→</span>
                             <input type="text" placeholder="/container/path" value={row.containerPath}
                               onChange={(e) => setExtMountRows(extMountRows.map((r, idx) => idx === i ? { ...r, containerPath: e.target.value } : r))}
-                              className="flex-1 rounded-lg bg-white dark:bg-[#0f1723]/60 border border-gray-300 dark:border-gray-700/50 text-gray-900 dark:text-white text-xs px-2 py-2 font-mono focus:outline-none focus:ring-1 focus:ring-[var(--gp-ods-accent-primary)] dark:focus:ring-white/20" />
+                              className="flex-1 rounded-lg bg-white dark:bg-[#15221d]/60 border border-gray-300 dark:border-gray-700/50 text-gray-900 dark:text-white text-xs px-2 py-2 font-mono focus:outline-none focus:ring-1 focus:ring-[var(--gp-ods-accent-primary)] dark:focus:ring-white/20" />
                             <AppButton type="button" tone="ghost"
                               onClick={() => setExtMountRows(extMountRows.filter((_, idx) => idx !== i))}
                               className="p-1 text-gray-400 hover:text-red-400 rounded">
@@ -1566,7 +1567,7 @@ export function InstallGameServer({
                             <div key={label}>
                               <label className="block text-xs text-gray-500 dark:text-gray-400 mb-1.5">{label}</label>
                               <input type={type} value={value} onChange={(e) => set(e.target.value)} placeholder={placeholder}
-                                className="w-full rounded-lg bg-white dark:bg-[#0f1723]/60 border border-gray-300 dark:border-gray-700/50 text-gray-900 dark:text-white text-xs px-3 py-2 focus:outline-none focus:ring-1 focus:ring-[var(--gp-ods-accent-primary)] dark:focus:ring-white/20" />
+                                className="w-full rounded-lg bg-white dark:bg-[#15221d]/60 border border-gray-300 dark:border-gray-700/50 text-gray-900 dark:text-white text-xs px-3 py-2 focus:outline-none focus:ring-1 focus:ring-[var(--gp-ods-accent-primary)] dark:focus:ring-white/20" />
                             </div>
                           ))}
                         </div>
@@ -1586,10 +1587,10 @@ export function InstallGameServer({
                           <div key={i} className="flex gap-2 mb-2 items-center">
                             <input type="text" placeholder="KEY" value={row.key}
                               onChange={(e) => setExtEnvRows(extEnvRows.map((r, idx) => idx === i ? { ...r, key: e.target.value } : r))}
-                              className="w-36 rounded-lg bg-white dark:bg-[#0f1723]/60 border border-gray-300 dark:border-gray-700/50 text-gray-900 dark:text-white text-xs px-2 py-2 font-mono focus:outline-none focus:ring-1 focus:ring-[var(--gp-ods-accent-primary)] dark:focus:ring-white/20" />
+                              className="w-36 rounded-lg bg-white dark:bg-[#15221d]/60 border border-gray-300 dark:border-gray-700/50 text-gray-900 dark:text-white text-xs px-2 py-2 font-mono focus:outline-none focus:ring-1 focus:ring-[var(--gp-ods-accent-primary)] dark:focus:ring-white/20" />
                             <input type="text" placeholder="value" value={row.value}
                               onChange={(e) => setExtEnvRows(extEnvRows.map((r, idx) => idx === i ? { ...r, value: e.target.value } : r))}
-                              className="flex-1 rounded-lg bg-white dark:bg-[#0f1723]/60 border border-gray-300 dark:border-gray-700/50 text-gray-900 dark:text-white text-xs px-2 py-2 font-mono focus:outline-none focus:ring-1 focus:ring-[var(--gp-ods-accent-primary)] dark:focus:ring-white/20" />
+                              className="flex-1 rounded-lg bg-white dark:bg-[#15221d]/60 border border-gray-300 dark:border-gray-700/50 text-gray-900 dark:text-white text-xs px-2 py-2 font-mono focus:outline-none focus:ring-1 focus:ring-[var(--gp-ods-accent-primary)] dark:focus:ring-white/20" />
                             <AppButton type="button" tone="ghost"
                               onClick={() => setExtEnvRows(extEnvRows.filter((_, idx) => idx !== i))}
                               className="p-1 text-gray-400 hover:text-red-400 rounded">
@@ -1606,7 +1607,7 @@ export function InstallGameServer({
                             <span className="w-20 flex-shrink-0 text-xs text-gray-500 dark:text-gray-400">vCPU</span>
                             <input type="number" min="0" step="0.1" value={extCpuLimit} onChange={(e) => setExtCpuLimit(e.target.value)}
                               placeholder="e.g. 2"
-                              className="flex-1 rounded-lg bg-white dark:bg-[#0f1723]/60 border border-gray-300 dark:border-gray-700/50 text-gray-900 dark:text-white text-xs px-3 py-2 focus:outline-none focus:ring-1 focus:ring-[var(--gp-ods-accent-primary)] dark:focus:ring-white/20" />
+                              className="flex-1 rounded-lg bg-white dark:bg-[#15221d]/60 border border-gray-300 dark:border-gray-700/50 text-gray-900 dark:text-white text-xs px-3 py-2 focus:outline-none focus:ring-1 focus:ring-[var(--gp-ods-accent-primary)] dark:focus:ring-white/20" />
                             {extCpuLimit && (
                               <button type="button" onClick={() => setExtCpuLimit('')}
                                 className="p-1.5 rounded text-gray-400 hover:text-red-400 hover:bg-red-400/10 transition-colors flex-shrink-0">
@@ -1618,7 +1619,7 @@ export function InstallGameServer({
                             <span className="w-20 flex-shrink-0 text-xs text-gray-500 dark:text-gray-400">RAM (MB)</span>
                             <input type="number" min="0" step="128" value={extMemoryLimitMb} onChange={(e) => setExtMemoryLimitMb(e.target.value)}
                               placeholder="e.g. 4096"
-                              className="flex-1 rounded-lg bg-white dark:bg-[#0f1723]/60 border border-gray-300 dark:border-gray-700/50 text-gray-900 dark:text-white text-xs px-3 py-2 focus:outline-none focus:ring-1 focus:ring-[var(--gp-ods-accent-primary)] dark:focus:ring-white/20" />
+                              className="flex-1 rounded-lg bg-white dark:bg-[#15221d]/60 border border-gray-300 dark:border-gray-700/50 text-gray-900 dark:text-white text-xs px-3 py-2 focus:outline-none focus:ring-1 focus:ring-[var(--gp-ods-accent-primary)] dark:focus:ring-white/20" />
                             {extMemoryLimitMb && !isNaN(Number(extMemoryLimitMb)) && Number(extMemoryLimitMb) > 0 && (
                               <span className="text-xs flex-shrink-0 text-gray-400">≈ {(Number(extMemoryLimitMb) / 1024).toFixed(1)} GB</span>
                             )}

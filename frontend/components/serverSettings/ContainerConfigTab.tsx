@@ -1,3 +1,4 @@
+// Athini palette customization; see NOTICE.
 import { useState, useEffect, useMemo } from 'react';
 import { Plus, Trash2, Save, AlertTriangle, Loader2, RefreshCw, X } from 'lucide-react';
 import { AppButton } from '../../src/ui/components';
@@ -143,7 +144,7 @@ function mountsFromRaw(raw: unknown): MountEntry[] {
 }
 
 const inputClass =
-  'w-full rounded bg-[#1f2937] border border-gray-600 text-white text-sm px-3 py-1.5 focus:outline-none focus:ring-1 focus:ring-[var(--gp-primary-300)] disabled:opacity-50';
+  'w-full rounded bg-[#172b22] border border-gray-600 text-white text-sm px-3 py-1.5 focus:outline-none focus:ring-1 focus:ring-[var(--gp-primary-300)] disabled:opacity-50';
 
 const sectionClass = 'space-y-3';
 
@@ -318,7 +319,7 @@ export function ContainerConfigTab({
         {dockerImage && (
           <div className={`${contentBg} border ${borderColor} rounded-lg p-4 sm:p-6`}>
             <h4 className={`text-base font-semibold ${textPrimary} mb-3`}>Docker Image</h4>
-            <code className="block w-full rounded bg-[#1f2937] text-gray-400 text-sm px-3 py-2 font-mono break-all select-all">
+            <code className="block w-full rounded bg-[#172b22] text-gray-400 text-sm px-3 py-2 font-mono break-all select-all">
               {dockerImage}
             </code>
           </div>

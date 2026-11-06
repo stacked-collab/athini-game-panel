@@ -1,3 +1,4 @@
+// Athini palette customization; see NOTICE.
 import {
   startTransition,
   useDeferredValue,
@@ -744,7 +745,7 @@ export function HostStatus() {
 
   const cardBg = 'bg-gp-surface-card';
   const cardBorder = 'border-gray-800';
-  const cardShadow = 'shadow-[0_4px_20px_rgba(2,6,23,0.5),0_1px_4px_rgba(2,6,23,0.3)]';
+  const cardShadow = 'shadow-[0_4px_20px_rgba(12, 20, 16,0.5),0_1px_4px_rgba(12, 20, 16,0.3)]';
   const textPrimary = 'text-white';
   const textSecondary = 'text-gray-400';
   const progressBg = 'bg-gray-700';

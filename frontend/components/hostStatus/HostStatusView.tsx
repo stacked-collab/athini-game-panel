@@ -1,3 +1,4 @@
+// Athini palette customization; see NOTICE.
 import { memo, useEffect, useRef } from 'react';
 import type { MouseEvent } from 'react';
 import { Activity, Cpu, Network, TrendingUp, TrendingDown, HardDrive } from 'lucide-react';
@@ -133,7 +134,7 @@ export const HostStatusView = memo(function HostStatusView({
   const isDark = theme === 'dark';
   const historyCurveColor = ODS_CHART_THEME.cpu;
   const usageBarColor = ODS_CHART_THEME.progressCpu;
-  const networkInColor  = isDark ? ODS_CHART_THEME.networkOut : '#7c3aed';
+  const networkInColor  = isDark ? ODS_CHART_THEME.networkOut : '#254c39';
   const networkOutColor = isDark ? ODS_CHART_THEME.networkIn  : ODS_CHART_THEME.cpu;
   const networkHistoryInColor  = networkInColor;
   const networkHistoryOutColor = networkOutColor;

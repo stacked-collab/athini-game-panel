@@ -1,3 +1,4 @@
+// Athini palette customization; see NOTICE.
 import { Plus } from 'lucide-react';
 import type { GameServer } from '../../types/gameServer';
 import { GameServerCard, type GameServerCardActions } from './GameServerCard';
@@ -43,7 +44,7 @@ export function GameServersGrid({
           title={canInstall ? 'Install game server' : 'Missing permission: server.install'}
           className={`group flex min-h-[140px] flex-col items-center justify-center gap-2 rounded-lg border-2 border-dashed p-4 font-semibold transition-all ${
             canOpenInstallModal
-              ? 'border-[var(--color-cyan-400)]/40 bg-[#0050D7]/5 text-[var(--color-cyan-400)] hover:border-[var(--color-cyan-400)] hover:bg-[#157EEA]/15 hover:text-white'
+              ? 'border-[var(--color-cyan-400)]/40 bg-[#254c39]/5 text-[var(--color-cyan-400)] hover:border-[var(--color-cyan-400)] hover:bg-[#2b5440]/15 hover:text-white'
               : 'cursor-not-allowed border-gray-700 bg-gray-800/40 text-gray-500'
           }`}
         >

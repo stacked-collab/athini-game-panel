@@ -1,15 +1,16 @@
+// Athini palette customization; see NOTICE.
 import type { SettingsTab } from './access';
 
 export const SERVER_SETTINGS_THEME = {
-  modalBg: 'bg-[#0f172a]',
-  sidebarBg: 'bg-[#1e293b]',
-  contentBg: 'bg-[#111827]',
+  modalBg: 'bg-[#15221d]',
+  sidebarBg: 'bg-[#172b22]',
+  contentBg: 'bg-[#15221d]',
   borderColor: 'border-gray-700',
   textPrimary: 'text-white',
   textSecondary: 'text-gray-400',
   hoverBg: 'hover:bg-gray-700',
   activeBg: 'bg-[var(--gp-primary-300)]',
-  inputBg: 'bg-[#1f2937]',
+  inputBg: 'bg-[#172b22]',
   inputBorder: 'border-gray-600',
 } as const;
 
@@ -25,7 +26,7 @@ export function createSettingsTabButtonClass(
       !canAccessTab(tab)
         ? 'text-gray-500 bg-transparent cursor-not-allowed opacity-60'
         : activeTab === tab
-          ? `${activeBg} text-[#031126]`
+          ? `${activeBg} text-[#10251a]`
           : `${textPrimary} bg-transparent ${hoverBg}`
     }`;
 }

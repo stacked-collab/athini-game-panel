@@ -1,3 +1,4 @@
+// Athini palette customization; see NOTICE.
 import { useState } from 'react';
 import { AlertCircle, Eye, EyeOff, Plus } from 'lucide-react';
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from '../ui/dialog';
@@ -38,7 +39,7 @@ export function CreateUserDialog({
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent className="w-[94vw] sm:w-full max-h-[90vh] sm:max-w-[420px] overflow-hidden border border-gray-700/80 bg-[#0f172a] p-0 text-white">
+      <DialogContent className="w-[94vw] sm:w-full max-h-[90vh] sm:max-w-[420px] overflow-hidden border border-gray-700/80 bg-[#15221d] p-0 text-white">
         <div className="max-h-[90vh] overflow-y-auto hide-scrollbar modal-scrollbar-dark p-6 md:p-7">
           <DialogHeader className="border-b border-gray-800 pb-5 pr-8">
             <DialogTitle className="text-xl text-white">Create user</DialogTitle>
@@ -61,7 +62,7 @@ export function CreateUserDialog({
                 placeholder="Username"
                 name="new-user-username"
                 autoComplete="off"
-                className="prevent-autofill w-full rounded border border-gray-700 bg-[#1f2937] px-3 py-2 text-sm text-white focus:border-[var(--color-cyan-400)] focus:outline-none"
+                className="prevent-autofill w-full rounded border border-gray-700 bg-[#172b22] px-3 py-2 text-sm text-white focus:border-[var(--color-cyan-400)] focus:outline-none"
               />
               <div className="relative">
                 <AppInput
@@ -73,7 +74,7 @@ export function CreateUserDialog({
                   autoComplete="new-password"
                   data-lpignore="true"
                   data-1p-ignore="true"
-                  className="prevent-autofill w-full rounded border border-gray-700 bg-[#1f2937] px-3 py-2 pr-10 text-sm text-white focus:border-[var(--color-cyan-400)] focus:outline-none"
+                  className="prevent-autofill w-full rounded border border-gray-700 bg-[#172b22] px-3 py-2 pr-10 text-sm text-white focus:border-[var(--color-cyan-400)] focus:outline-none"
                 />
                 <button type="button" tabIndex={-1} onClick={() => setShowPassword(s => !s)}
                   className="absolute right-2.5 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-200 transition-colors">
@@ -90,7 +91,7 @@ export function CreateUserDialog({
                   autoComplete="new-password"
                   data-lpignore="true"
                   data-1p-ignore="true"
-                  className="prevent-autofill w-full rounded border border-gray-700 bg-[#1f2937] px-3 py-2 pr-10 text-sm text-white focus:border-[var(--color-cyan-400)] focus:outline-none"
+                  className="prevent-autofill w-full rounded border border-gray-700 bg-[#172b22] px-3 py-2 pr-10 text-sm text-white focus:border-[var(--color-cyan-400)] focus:outline-none"
                 />
                 <button type="button" tabIndex={-1} onClick={() => setShowPasswordConfirm(s => !s)}
                   className="absolute right-2.5 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-200 transition-colors">

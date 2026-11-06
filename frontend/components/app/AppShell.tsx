@@ -201,7 +201,7 @@ export function AppShell({
         />
       </div>
 
-      <div className={`athini-mobile-header md:hidden fixed top-0 left-0 right-0 z-40 border-b ${mobileMenuOpen ? 'hidden' : ''} ${isDark ? 'border-gray-800 bg-[#111827]' : 'border-[#000b82] bg-[#000e9c]'}`}>
+      <div className={`athini-mobile-header md:hidden fixed top-0 left-0 right-0 z-40 border-b ${mobileMenuOpen ? 'hidden' : ''} ${isDark ? 'border-gray-800 bg-[#15221d]' : 'border-[#193c29] bg-[#254c39]'}`}>
         <div className="flex items-center justify-between p-4">
           <AppButton
             onClick={() => setMobileMenuOpen(true)}
@@ -234,7 +234,7 @@ export function AppShell({
             aria-modal="true"
             aria-label="Navigation menu"
             tabIndex={-1}
-            className={`fixed top-0 left-0 bottom-0 w-[280px] z-50 md:hidden overflow-y-auto focus:outline-none ${isDark ? 'bg-[#111827]' : 'bg-white'}`}
+            className={`fixed top-0 left-0 bottom-0 w-[280px] z-50 md:hidden overflow-y-auto focus:outline-none ${isDark ? 'bg-[#15221d]' : 'bg-white'}`}
           >
             <Sidebar
               activeTab={activeTab}

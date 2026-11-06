@@ -1,3 +1,4 @@
+// Athini palette customization; see NOTICE.
 import { memo, useCallback, useMemo, useRef } from 'react';
 import { css } from '@codemirror/lang-css';
 import { html } from '@codemirror/lang-html';
@@ -28,7 +29,10 @@ function detectLanguage(filename: string): Extension | null {
 }
 
 const baseTheme = EditorView.theme({
-  '&': { height: '100%' },
+  '&': { height: '100%', backgroundColor: '#0e1815', color: '#dce5df' },
+  '.cm-gutters': { backgroundColor: '#15221d', color: '#91a399', borderColor: '#30473b' },
+  '.cm-activeLine, .cm-activeLineGutter': { backgroundColor: '#254c3933' },
+  '.cm-selectionBackground': { backgroundColor: '#254c39' },
   '.cm-scroller': {
     fontFamily: '"JetBrains Mono", "Fira Code", "Cascadia Code", "Consolas", monospace',
     fontSize: '13px',
@@ -38,15 +42,15 @@ const baseTheme = EditorView.theme({
 
   // oneDark themes the panel background but leaves its controls native, which read as light
   // boxes on the dark editor.
-  '.cm-panels': { borderColor: '#334155' },
+  '.cm-panels': { borderColor: '#30473b' },
   // Native checkboxes ignore accent-color while unchecked; color-scheme makes the browser
   // render its own controls dark instead.
   '.cm-panel.cm-search': { padding: '8px 10px', colorScheme: 'dark' },
   '.cm-panel.cm-search .cm-textfield': {
-    backgroundColor: '#0b1220',
-    border: '1px solid #334155',
+    backgroundColor: '#0e1815',
+    border: '1px solid #30473b',
     borderRadius: '6px',
-    color: '#e6edf7',
+    color: '#dce5df',
     padding: '4px 8px',
   },
   '.cm-panel.cm-search .cm-textfield:focus-visible': {
@@ -55,21 +59,21 @@ const baseTheme = EditorView.theme({
   },
   '.cm-panel.cm-search .cm-button': {
     backgroundImage: 'none',
-    backgroundColor: '#1f2937',
-    border: '1px solid #334155',
+    backgroundColor: '#172b22',
+    border: '1px solid #30473b',
     borderRadius: '6px',
-    color: '#e6edf7',
+    color: '#dce5df',
     padding: '4px 10px',
   },
-  '.cm-panel.cm-search .cm-button:hover': { backgroundColor: '#27364d' },
-  '.cm-panel.cm-search .cm-button:active': { backgroundColor: '#0f172a' },
-  '.cm-panel.cm-search label': { color: '#94a3b8', fontSize: '12px' },
+  '.cm-panel.cm-search .cm-button:hover': { backgroundColor: '#294736' },
+  '.cm-panel.cm-search .cm-button:active': { backgroundColor: '#15221d' },
+  '.cm-panel.cm-search label': { color: '#a7b6ad', fontSize: '12px' },
   '.cm-panel.cm-search input[type=checkbox]': {
     accentColor: 'var(--gp-ods-accent-primary)',
     verticalAlign: 'middle',
   },
-  '.cm-panel.cm-search [name=close]': { color: '#94a3b8', cursor: 'pointer' },
-  '.cm-panel.cm-search [name=close]:hover': { color: '#e6edf7' },
+  '.cm-panel.cm-search [name=close]': { color: '#a7b6ad', cursor: 'pointer' },
+  '.cm-panel.cm-search [name=close]:hover': { color: '#dce5df' },
 });
 
 // searchKeymap binds Escape to closeSearchPanel. Taking the key first while the panel is

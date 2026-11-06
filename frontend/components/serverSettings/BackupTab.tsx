@@ -1,3 +1,4 @@
+// Athini palette customization; see NOTICE.
 import { useState } from 'react';
 import { AppButton, AppSlider, AppToggle } from '../../src/ui/components';
 import {
@@ -274,7 +275,7 @@ export function BackupTab({
                   className={`border ${borderColor} rounded-lg p-3 md:p-4 flex flex-col sm:flex-row sm:items-center gap-3 sm:justify-between transition-colors ${hoverBg}`}
                 >
                   <div className="flex items-center gap-3 md:gap-4 min-w-0 flex-1">
-                    <div className="p-2 md:p-3 bg-[#0050D7]/10 rounded flex-shrink-0">
+                    <div className="p-2 md:p-3 bg-[#254c39]/10 rounded flex-shrink-0">
                       <HardDrive className="w-5 h-5 md:w-6 md:h-6 text-[var(--color-cyan-400)]" />
                     </div>
                     <div className="min-w-0 flex-1">
