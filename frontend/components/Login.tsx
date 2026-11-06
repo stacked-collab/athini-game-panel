@@ -1,5 +1,7 @@
+// Athini customization: branding or fork repository defaults. See NOTICE and LICENSE.
 import { useState } from 'react';
 import { Eye, EyeOff, Lock, User, AlertCircle } from 'lucide-react';
+import { AthiniBrand } from './AthiniBrand';
 import { apiClient } from '../utils/api';
 
 interface LoginProps {
@@ -58,16 +60,11 @@ export function Login({ onLogin }: LoginProps) {
   return (
     <div
       className="min-h-screen flex items-center justify-center px-4"
-      style={{ background: 'linear-gradient(135deg, #000e9c 0%, #002dbe 100%)' }}
+      style={{ background: 'linear-gradient(135deg, #12201b 0%, #254c39 100%)' }}
     >
       <div className="w-full max-w-md">
         <div className="mb-8 flex flex-col items-center gap-3">
-          <img
-            src="/OVHcloud_Game_Panel_Logo.png"
-            alt="OVHcloud Game Panel"
-            className="h-14 w-auto object-contain"
-            style={{ filter: 'brightness(0) invert(1)' }}
-          />
+          <AthiniBrand className="athini-brand--login" />
           <p className="text-sm" style={{ color: 'rgba(255,255,255,0.65)' }}>
             Sign in to manage your game servers
           </p>
@@ -114,10 +111,10 @@ export function Login({ onLogin }: LoginProps) {
                       color: '#0f172a',
                     }}
                     onFocus={(e) => {
-                      e.currentTarget.style.borderColor = showError ? '#f87171' : '#0050d7';
+                      e.currentTarget.style.borderColor = showError ? '#f87171' : '#1e7f4f';
                       e.currentTarget.style.boxShadow = showError
                         ? '0 0 0 3px rgba(239,68,68,0.12)'
-                        : '0 0 0 3px rgba(0,80,215,0.12)';
+                        : '0 0 0 3px rgba(30,127,79,0.12)';
                     }}
                     onBlur={(e) => {
                       e.currentTarget.style.borderColor = showError ? '#fca5a5' : '#cbd5e1';
@@ -149,10 +146,10 @@ export function Login({ onLogin }: LoginProps) {
                       color: '#0f172a',
                     }}
                     onFocus={(e) => {
-                      e.currentTarget.style.borderColor = showError ? '#f87171' : '#0050d7';
+                      e.currentTarget.style.borderColor = showError ? '#f87171' : '#1e7f4f';
                       e.currentTarget.style.boxShadow = showError
                         ? '0 0 0 3px rgba(239,68,68,0.12)'
-                        : '0 0 0 3px rgba(0,80,215,0.12)';
+                        : '0 0 0 3px rgba(30,127,79,0.12)';
                     }}
                     onBlur={(e) => {
                       e.currentTarget.style.borderColor = showError ? '#fca5a5' : '#cbd5e1';
@@ -164,7 +161,7 @@ export function Login({ onLogin }: LoginProps) {
                     onClick={() => setShowPassword(!showPassword)}
                     className="absolute inset-y-0 right-0 flex items-center pr-3 transition-colors"
                     style={{ color: '#94a3b8', background: 'transparent', border: 'none' }}
-                    onMouseEnter={(e) => (e.currentTarget.style.color = '#0050d7')}
+                    onMouseEnter={(e) => (e.currentTarget.style.color = '#1e7f4f')}
                     onMouseLeave={(e) => (e.currentTarget.style.color = '#94a3b8')}
                   >
                     {showPassword ? <EyeOff className="h-4 w-4" /> : <Eye className="h-4 w-4" />}
@@ -177,17 +174,17 @@ export function Login({ onLogin }: LoginProps) {
                 disabled={loading}
                 className="mt-2 w-full rounded-lg py-2.5 text-sm font-semibold transition-all"
                 style={{
-                  background: loading ? '#94a3b8' : 'linear-gradient(135deg, #003cbd 0%, #0050d7 100%)',
+                  background: loading ? '#94a3b8' : 'linear-gradient(135deg, #254c39 0%, #1e7f4f 100%)',
                   cursor: loading ? 'not-allowed' : 'pointer',
                   border: 'none',
-                  boxShadow: loading ? 'none' : '0 2px 8px rgba(0,80,215,0.30)',
+                  boxShadow: loading ? 'none' : '0 2px 8px rgba(30,127,79,0.30)',
                   color: '#ffffff',
                 }}
                 onMouseEnter={(e) => {
-                  if (!loading) e.currentTarget.style.background = 'linear-gradient(135deg, #002fa3 0%, #003cbd 100%)';
+                  if (!loading) e.currentTarget.style.background = 'linear-gradient(135deg, #1c3a2c 0%, #196840 100%)';
                 }}
                 onMouseLeave={(e) => {
-                  if (!loading) e.currentTarget.style.background = 'linear-gradient(135deg, #003cbd 0%, #0050d7 100%)';
+                  if (!loading) e.currentTarget.style.background = 'linear-gradient(135deg, #254c39 0%, #1e7f4f 100%)';
                 }}
               >
                 {loading ? 'Signing in…' : 'Sign In'}
@@ -197,7 +194,7 @@ export function Login({ onLogin }: LoginProps) {
         </div>
 
         <p className="mt-6 text-center text-xs" style={{ color: 'rgba(255,255,255,0.4)' }}>
-          © 2026 OVHcloud. All rights reserved.
+          Athini Game Panel
         </p>
       </div>
     </div>

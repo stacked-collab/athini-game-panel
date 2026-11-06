@@ -1,7 +1,9 @@
+// Athini customization: branding or fork repository defaults. See NOTICE and LICENSE.
 import { lazy, Suspense, useRef } from 'react';
 import { Menu } from 'lucide-react';
 import { useTheme } from '../../contexts/ThemeContext';
 import { useFocusTrap } from '../../src/ui/utils/useFocusTrap';
+import { AthiniBrand } from '../AthiniBrand';
 import { Sidebar } from '../Sidebar';
 import { GameServersTable } from '../GameServersTable';
 import { NewsPanel } from '../NewsPanel';
@@ -199,7 +201,7 @@ export function AppShell({
         />
       </div>
 
-      <div className={`md:hidden fixed top-0 left-0 right-0 z-40 border-b ${mobileMenuOpen ? 'hidden' : ''} ${isDark ? 'border-gray-800 bg-[#111827]' : 'border-[#000b82] bg-[#000e9c]'}`}>
+      <div className={`athini-mobile-header md:hidden fixed top-0 left-0 right-0 z-40 border-b ${mobileMenuOpen ? 'hidden' : ''} ${isDark ? 'border-gray-800 bg-[#111827]' : 'border-[#000b82] bg-[#000e9c]'}`}>
         <div className="flex items-center justify-between p-4">
           <AppButton
             onClick={() => setMobileMenuOpen(true)}
@@ -212,12 +214,7 @@ export function AppShell({
           >
             <Menu className={`w-6 h-6 ${isDark ? 'text-white' : 'text-white'}`} />
           </AppButton>
-          <img
-            src="/OVHcloud_Game_Panel_Logo.png"
-            alt="OVHcloud Game Panel"
-            draggable={false}
-            className="h-8 w-auto max-w-[70%] object-contain brightness-0 invert select-none"
-          />
+          <AthiniBrand compact />
           <div className="w-10"></div>
         </div>
       </div>

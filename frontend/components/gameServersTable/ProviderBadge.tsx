@@ -1,3 +1,4 @@
+// Athini customization: branded logo; provider identifiers are unchanged. See NOTICE.
 import type { CSSProperties } from 'react';
 import { useTheme } from '../../contexts/ThemeContext';
 
@@ -5,29 +6,15 @@ interface ProviderBadgeProps {
   provider?: string;
 }
 
-function OvhEmblem({ isDark, style }: { isDark: boolean; style?: CSSProperties }) {
-  return (
-    <svg
-      viewBox="0 0 53 32"
-      xmlns="http://www.w3.org/2000/svg"
-      fill={isDark ? '#ffffff' : '#0050D7'}
-      style={{ height: 20, width: 'auto', display: 'block', ...style }}
-      aria-label="OVHcloud"
-    >
-      <path
-        clipRule="evenodd"
-        fillRule="evenodd"
-        d="M49.0997 1.83051C54.4055 11.4576 53.3981 23.3898 46.6147 32H32.1748L36.6075 24.0678H30.7644L37.6821 11.7966H43.5924L49.0997 1.83051ZM20.6901 32H5.98156C2.42173 27.5692 0.426997 22.2408 0.0614314 16.8C0.0345892 16.4005 0.0165306 16.0004 0.00728085 15.6C-0.000481239 15.264 -0.0020401 14.9278 0.00261926 14.5916C0.00867182 14.1548 0.0252172 13.718 0.0522883 13.2815C0.0830303 12.7859 0.127346 12.2907 0.185284 11.7966C0.591502 8.33228 1.66734 4.9199 3.4294 1.76271L12.9664 18.4407L23.4437 0H38.8911L20.6901 32Z"
-      />
-    </svg>
-  );
+function AthiniEmblem({ style }: { style?: CSSProperties }) {
+  return <img src="/athini-logo.svg" alt="Athini" style={{ height: 20, width: 20, display: 'block', ...style }} />;
 }
 
 export function ProviderLogo({ provider, height = 22 }: { provider?: string; height?: number }) {
   const { theme } = useTheme();
   const isDark = theme === 'dark';
   if (provider === 'ovhcloud') {
-    return <OvhEmblem isDark={isDark} style={{ height, width: 'auto', flexShrink: 0 }} />;
+    return <AthiniEmblem style={{ height, width: 'auto', flexShrink: 0 }} />;
   }
   if (provider === 'linuxgsm') {
     return (
@@ -75,7 +62,7 @@ export function ProviderBadge({ provider }: ProviderBadgeProps) {
   if (provider === 'ovhcloud') {
     return (
       <div style={slot}>
-        <OvhEmblem isDark={isDark} />
+        <AthiniEmblem />
       </div>
     );
   }

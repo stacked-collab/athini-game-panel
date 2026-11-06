@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# Athini customization: use the Athini fork for panel installation and updates.
 # Renders the Game Panel compose file and guarantees its prerequisites.
 #
 # The compose file holds no installation-specific value - everything variable
@@ -64,7 +65,7 @@ ensure_env_defaults() {
   env_file_append_if_missing "$ENV_FILE" 'TELEMETRY_API_BASE_URL' "$telemetry_api_base_url"
   env_file_append_if_missing "$ENV_FILE" 'GAMEPANEL_APP_ROOT' "$APP_ROOT"
   env_file_append_if_missing "$ENV_FILE" 'GAMEPANEL_REPOSITORY_URL' \
-    "${GP_UPDATE_REPO_URL:-https://github.com/ovh/game-panel.git}"
+    "${GP_UPDATE_REPO_URL:-https://github.com/stacked-collab/athini-game-panel.git}"
 }
 
 ensure_games_network() {

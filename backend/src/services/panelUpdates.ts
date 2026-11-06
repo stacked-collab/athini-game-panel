@@ -1,3 +1,4 @@
+// Athini customization: branding or fork repository defaults. See NOTICE and LICENSE.
 import { panelUpdateJobRepository } from '../database/index.js';
 import { getAppVersion } from '../utils/appInfo.js';
 import { docker } from '../utils/docker/client.js';
@@ -6,7 +7,7 @@ import { getConfig } from '../config.js';
 import { logError } from '../utils/logger.js';
 import { toIsoTimestamp, toIsoTimestampOrNull } from '../utils/time.js';
 
-const GITHUB_RELEASES_URL = 'https://api.github.com/repos/ovh/game-panel/releases?per_page=100';
+const GITHUB_RELEASES_URL = 'https://api.github.com/repos/stacked-collab/athini-game-panel/releases?per_page=100';
 const RELEASES_CACHE_TTL_MS = 10 * 60 * 1000;
 const VERSION_RE = /^(\d+)\.(\d+)\.(\d+)(?:-([0-9A-Za-z.-]+))?$/;
 

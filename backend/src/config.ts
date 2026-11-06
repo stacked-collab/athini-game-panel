@@ -1,3 +1,4 @@
+// Athini customization: branding or fork repository defaults. See NOTICE and LICENSE.
 import path from 'node:path';
 import { gamePanelImage } from './utils/images.js';
 
@@ -120,7 +121,7 @@ export function getConfig(): AppConfig {
         composeProjectName: envOrDefault('COMPOSE_PROJECT_NAME', 'gamepanel'),
         gamesNetwork: envOrDefault('GAMEPANEL_GAMES_NETWORK', 'gamepanel-games'),
         updaterImage: envOrDefault('GAMEPANEL_UPDATER_IMAGE', gamePanelImage('gamepanel-updater')),
-        repositoryUrl: envOrDefault('GAMEPANEL_REPOSITORY_URL', 'https://github.com/ovh/game-panel.git'),
+        repositoryUrl: envOrDefault('GAMEPANEL_REPOSITORY_URL', 'https://github.com/stacked-collab/athini-game-panel.git'),
         instanceId: process.env.APP_INSTANCE_ID?.trim() || null,
         instanceSecret: process.env.APP_INSTANCE_SECRET?.trim() || null,
         telemetryEnabled: boolEnv('TELEMETRY_ENABLED', true),

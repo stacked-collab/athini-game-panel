@@ -1,3 +1,4 @@
+// Athini customization: branding or fork repository defaults. See NOTICE and LICENSE.
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { App } from './App.tsx';
@@ -9,6 +10,7 @@ import '@ovhcloud/ods-themes/default/fonts';
 import './src/ui/theme/ods-dark.css';
 import './src/ui/theme/ods-light.css';
 import './styles/globals.css';
+import './styles/athini-brand.css';
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>

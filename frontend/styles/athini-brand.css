@@ -1,0 +1,48 @@
+/* Athini branding layer. Layout and game-management behavior remain upstream. */
+:root, html:not(.dark) {
+  --athini-green: #1e7f4f;
+  --athini-sidebar: #254c39;
+  --athini-sidebar-dark: #12201b;
+  --gp-primary-100: #daf3e6;
+  --gp-primary-200: #b5e8cd;
+  --gp-primary-300: #77dba7;
+  --gp-primary-400: #2f9c65;
+  --gp-primary-500: #1e7f4f;
+  --gp-primary-600: #196840;
+  --gp-primary-700: #254c39;
+  --gp-ods-accent-primary: var(--athini-green);
+  --gp-ods-accent-secondary: #196840;
+  --primary: var(--athini-green);
+  --accent: var(--athini-green);
+  --ring: var(--athini-green);
+}
+html:not(.dark) { --color-cyan-400: var(--athini-green); }
+.athini-brand { display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-width: 0; color: #fff; text-align: left; }
+.athini-brand > img { width: 40px; height: 40px; flex: 0 0 auto; object-fit: contain; }
+.athini-brand > span { display: grid; gap: 2px; min-width: 0; }
+.athini-brand strong { color: #fff; font-size: 21px; font-weight: 700; line-height: 1.1; letter-spacing: -.03em; }
+.athini-brand small { color: #ffffffc7; font-size: 11px; line-height: 1.2; letter-spacing: .04em; }
+.athini-brand--compact > img { width: 32px; height: 32px; }
+.athini-brand--compact strong { font-size: 18px; }
+.athini-brand--compact small { font-size: 10px; }
+.athini-brand--login > img { width: 60px; height: 60px; }
+.athini-brand--login strong { font-size: 32px; }
+.athini-brand--login small { font-size: 14px; }
+.athini-sidebar, html:not(.dark) .athini-sidebar, .athini-mobile-header {
+  background: var(--athini-sidebar) !important; border-color: #ffffff20 !important; color: #fff;
+}
+.dark .athini-sidebar, .dark .athini-mobile-header { background: var(--athini-sidebar-dark) !important; }
+.athini-sidebar__brand { border-color: #ffffff20; display: flex; justify-content: center; }
+.athini-sidebar .gp-app-button.athini-sidebar__item {
+  background: transparent !important; color: #ffffffd9 !important; border-color: transparent !important;
+}
+.athini-sidebar .gp-app-button.athini-sidebar__item:hover:not(:disabled) { background: #ffffff14 !important; color: #fff !important; }
+.athini-sidebar .gp-app-button.athini-sidebar__item--active, .athini-sidebar .gp-app-button.athini-sidebar__item--active:hover:not(:disabled) {
+  background: #f2f7f3 !important; color: #193c29 !important; border-color: #f2f7f3 !important;
+}
+.athini-sidebar .gp-app-button.athini-sidebar__item:disabled { color: #ffffff66 !important; cursor: not-allowed; opacity: 1; }
+.athini-sidebar .gp-app-button:focus-visible, .athini-sidebar__footer :is(a, button):focus-visible { outline: 2px solid #b5e8cd; outline-offset: 3px; }
+.athini-sidebar .gp-user-avatar { background: #172e22 !important; border-color: #ffffff35 !important; color: #fff !important; }
+.athini-sidebar__footer { color: #ffffffc7; }
+.athini-sidebar__footer :is(a, button) { color: inherit; cursor: pointer; }
+.athini-sidebar__footer :is(a, button):hover { color: #fff; text-decoration: underline; }

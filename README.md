@@ -1,20 +1,24 @@
 <div align="center">
 
-# 🎮 OVHcloud Game Panel
+# Athini Game Panel
 
 ### Deploy and manage your game servers in minutes — from one clean, modern web interface.
 
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
 ![Platform](https://img.shields.io/badge/Platform-Linux-1793D1)
-[![Made by OVHcloud](https://img.shields.io/badge/Made%20by-OVHcloud-000e9c)](https://www.ovhcloud.com/)
+[![Based on OVHcloud Game Panel](https://img.shields.io/badge/Based%20on-OVHcloud%20Game%20Panel-254c39)](https://github.com/ovh/game-panel)
 
-<img src="docs/assets/game-panel.png" alt="OVHcloud Game Panel" width="900">
+<img src="frontend/public/athini-logo.svg" alt="Athini" width="96">
 
 </div>
 
 <br>
 
-OVHcloud Game Panel is an **open-source, self-hosted** control panel to deploy, run, and monitor your game servers — **without ever touching the command line**. Spin up a Minecraft, Counter-Strike 2, Hytale, Palworld, Project Zomboid, Rust, Valheim or Garry's Mod server in a few clicks, then manage its files, backups, player access, and performance from a single modern dashboard. 🚀
+Athini Game Panel is an Athini-branded fork of the **open-source, self-hosted** OVHcloud Game Panel. It keeps the upstream game management features and Apache-2.0 license.
+
+The Athini version adds its logo and green navigation, removes social and review promotions, and uses this repository for panel updates.
+
+The upstream project provides an **open-source, self-hosted** control panel to deploy, run, and monitor your game servers — **without ever touching the command line**. Spin up a Minecraft, Counter-Strike 2, Hytale, Palworld, Project Zomboid, Rust, Valheim or Garry's Mod server in a few clicks, then manage its files, backups, player access, and performance from a single modern dashboard. 🚀
 
 ## ✨ Features
 
@@ -69,8 +73,8 @@ Don't have the infrastructure yet? 🌐 [Domain name](https://www.ovhcloud.com/e
 
 ```bash
 sudo apt install git
-git clone https://github.com/ovh/game-panel.git
-cd game-panel
+git clone https://github.com/stacked-collab/athini-game-panel.git
+cd athini-game-panel
 sudo bash ./deploy/install.sh
 ```
 

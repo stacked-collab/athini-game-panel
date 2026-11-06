@@ -1,0 +1,12 @@
+Athini Game Panel
+
+Based on OVHcloud Game Panel v1.6.0
+Upstream source: https://github.com/ovh/game-panel
+Copyright OVH 2026
+Licensed under the Apache License, Version 2.0. See LICENSE.
+
+This distribution has been modified for Athini: green navigation and interface accents,
+Athini logo and page title, removal of social/review promotion, links to Athini service
+information, and update/install repository defaults pointing to the Athini fork.
+Original game/provider identifiers and upstream game-management functionality are retained.
+The Athini logo is used with the brand owner's authorization.

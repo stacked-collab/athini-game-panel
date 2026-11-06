@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# Athini customization: use the Athini fork for panel installation and updates.
 set -euo pipefail
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
@@ -100,7 +101,7 @@ main() {
 
   local repo_url=""
   repo_url="$(read_env_raw_value 'GAMEPANEL_REPOSITORY_URL')"
-  [[ -n "$repo_url" ]] || repo_url="https://github.com/ovh/game-panel.git"
+  [[ -n "$repo_url" ]] || repo_url="https://github.com/stacked-collab/athini-game-panel.git"
 
   log "Stopping Game Panel stack..."
   compose_cmd down --remove-orphans || warn "Could not stop the stack cleanly; continuing."

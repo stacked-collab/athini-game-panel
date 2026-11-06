@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# Athini customization: use the Athini fork for panel installation and updates.
 set -eEuo pipefail
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
@@ -505,7 +506,7 @@ JWT_SECRET=$(escape_env_value "$jwt_secret")
 ADMIN_USERNAME=$(escape_env_value "$ADMIN_USERNAME")
 ADMIN_PASSWORD=$(escape_env_value "$ADMIN_PASSWORD")
 GAMEPANEL_APP_ROOT=$(escape_env_value "$APP_ROOT")
-GAMEPANEL_REPOSITORY_URL=https://github.com/ovh/game-panel.git
+GAMEPANEL_REPOSITORY_URL=https://github.com/stacked-collab/athini-game-panel.git
 DOCKER_SOCKET=/var/run/docker.sock
 TRUST_PROXY=$(escape_env_value "1")
 APP_INSTANCE_ID=$(escape_env_value "$instance_id")
